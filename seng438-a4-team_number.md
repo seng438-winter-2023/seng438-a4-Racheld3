@@ -55,7 +55,7 @@ Original Mutation Coverage = 70% (with improved tests from assignment 3)
 Updated Statistics and Mutation Scores
 ---------------------------------------
 Test Suite Class: DataUtilities
-
+Updated Mutation Coverage = (with improved tests written)
 
 
 
@@ -68,6 +68,10 @@ Test Suite Class: Range
 # Analysis drawn on the effectiveness of each of the test classes
 DataUtilities Classes That Improved Score
 -------------------------
+- calculateColumnTotalForRowBeingEqualToRowCount()
+
+
+
 
 Range Classes That Improved Score
 ------------------------
@@ -78,10 +82,7 @@ Range Classes That Improved Score
 # A discussion of what could have been done to improve the mutation score of the test suites
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
-
-
-
-
+We need mutation testing to determine the effectiveness of software. Mutation testing allows us (developers/testers) to determine how effecitive our test suites are by getting the perecentage of mutants that tests can detect. When Mutation Coverage percentage is high that means that test suites are effective and can determine potential faults in code. It also has the advatage of helping testers determine which areas of code is not covered by test suites already written. This helps identify weaknesses in our code by outlining which sections of a method were not properly tested. A disadvantage of mutation testing is how time consuming the process is, and as code size increases the number of mutants will grow as well, and testing becomes much more time consuming. Mutation testing can also have false positive and negatives, this means mutants that are not actual faults but detected by tests will come up as false positives. This causes testers to waste a lot of time looking to fix non existent faults. For companies since mutation testing is very time consuming it can be very costly as well.
 
 # Explain your SELENUIM test case design process
 

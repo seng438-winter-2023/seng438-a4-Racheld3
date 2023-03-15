@@ -876,6 +876,7 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	//Test case for calculateColumnTotal(Values2D data, int column)
 	@Test 
 	public void calculateColumnTotalForRowBeingEqualToRowCount() {
+		// This test case goes through and has column value be 1, and row=rowCount
 		// setup
 	    Mockery mockingContext = new Mockery();
 	    final Values2D values = mockingContext.mock(Values2D.class);
@@ -895,5 +896,40 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	    // verify
 	    assertEquals(0, DataUtilities.calculateColumnTotal(values, 0, value), .000000001d);
 	    // tear-down: NONE in this test method
+	    // KILLED 1 Mutation
+	    // Incremented (++a) integer local variable number 5 → KILLED
 	}
+	
+	@Test
+	public void calculateColumnTotalForIntegerLocalNumberFiveWithParametersForNullValue() {
+		// setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    int[] value = {0};
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getRowCount();
+	            will(returnValue(1)); 
+	            one(values).getValue(0, 0);
+	            will(returnValue(null));
+	            one(values).getValue(0, 1);
+	            will(returnValue(null));
+	            one(values).getValue(0, 2);
+	            will(returnValue(null));
+	            one(values).getValue(0, 3);
+	            will(returnValue(null));
+	        }
+	    });
+	    // verify
+	    assertEquals(0, DataUtilities.calculateColumnTotal(values, 0, value), .000000001d);
+	    // tear-down: NONE in this test method
+		
+	}
+	//13???? 155
+	//and 15?
+	
+	
+	
+	
+	
 }
