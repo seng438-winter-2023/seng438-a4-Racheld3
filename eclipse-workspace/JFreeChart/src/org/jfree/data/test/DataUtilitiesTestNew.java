@@ -872,7 +872,28 @@ public class DataUtilitiesTestNew extends DataUtilities {
 		assertEquals(result, expectedResult);
 	}
 	
-	//ASSIGNMENT 4 TESTS
-	
-	
+	//NEW UNIT TESTS FOR ASSIGNMENT 4
+	//Test case for calculateColumnTotal(Values2D data, int column)
+	@Test 
+	public void calculateColumnTotalForRowBeingEqualToRowCount() {
+		// setup
+	    Mockery mockingContext = new Mockery();
+	    final Values2D values = mockingContext.mock(Values2D.class);
+	    int[] value = {1};
+	    mockingContext.checking(new Expectations() {
+	        {
+	            one(values).getRowCount();
+	            will(returnValue(1)); 
+	            one(values).getValue(1, 0);
+	            will(returnValue(1.0));
+	            one(values).getValue(1, 1);
+	            will(returnValue(2.0));
+	            one(values).getValue(1, 2);
+	            will(returnValue(3.0));
+	        }
+	    });
+	    // verify
+	    assertEquals(0, DataUtilities.calculateColumnTotal(values, 0, value), .000000001d);
+	    // tear-down: NONE in this test method
+	}
 }
