@@ -15,6 +15,31 @@
 
 # Analysis of 10 Mutants of the Range class 
 
+Mutant 1: Line 93 - removed call to java/lang/IllegalArgumentException -> KILLED by testRangeConstructorWithLowerLessThanUpper
+Initially, this tests passes as a Range object cannot be created with a lower bound higher than upper bound. Pitest removes the call to the exception IllegalArgumentException, and because the test is expecting this exception to be thrown but is not thrown in the presence of the mutant, the test fails, killing this mutant.
+
+Mutant 2: Line 105 - replaced return of double value with -(x + 1) for org/jfree/data/Range::getLowerBound -> KILLED by testGetLowerBoundForLowerBoundZero
+The test method testGetLowerBoundForLowerBoundZero() creates a Range object with a lower bound of 0 and an upper bound of 3. It then calls the getLowerBound() function and initially passes as the method simply returns the lower bound. With the mutant in place, the return value is changed to -(x + 1). This means for our particular case, the return value will be -(0 + 1) = -1. The test method is expecting the return value to be 0, so when -1 is returned, the test fails and this mutant is killed.
+
+Mutant 3: Line 114 - incremented (++a) double field upper -> KILLED by getUpperBoundForUpperBoundNegative
+The test method getUpperBoundForUpperBoundNegative creates a Range object with lower bound of -67 and upper bound of -14. It then calls the getUpperBound function and initially passes as the method simply returns the uper bound. With the mutant in place, the return value is first incremented (by 1) then returned from getUpperBound to the test method. The test is expecting a return value of -14, so when getUpperBound returns -14 + 1 = -13, the test fails and this mutant is killed.
+
+Mutant 4: Line 132 - decremented (a--) double field lower -> SURVIVED
+This mutant is a post-fix increment to the field lower in getCentralValue. Since it only increments lower after it is used in an operation, the increment does not affect the resulting calculation in getCentralValue, meaning all tests that call getCentralValue all still pass, meaning the mutant survived.
+
+Mutant 5: Line 144 - replaced boolean return with false for org/jfree/data/Range::contains -> KILLED by testContainsBelowUpperBoundOfRange
+The test method testContainsBelowUpperBoundOfRange creates a Range object with lower bound -72.55 and upper bound of -23. It then calls the contains method with an argument of -23.778. Initially this test passes as -23.778 is obviously within the range as stated above, but this mutant changes the return value from contains to false, meaning the test fails as it is expecting a return value of true, killing this mutant.
+
+Mutant 6:
+
+Mutant 7:
+
+Mutant 8: 
+
+Mutant 9:
+
+Mutant 10:
+
 # Report all the statistics and the mutation score for each test class
 Original Statistics and Mutation Scores
 ---------------------------------------
