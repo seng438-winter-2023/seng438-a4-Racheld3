@@ -925,4 +925,62 @@ public class RangeTestNew{
 //		assertEquals(expectedResult, result);
 //		
 //		}
+	
+	//ASSIGNMENT 4 TESTS
+	
+	//Tests for intersects(Range)
+	
+	//Killed mutant: replaced boolean return with true for org/jfree/data/Range::intersects
+	@Test
+	public void testIntersectsRangeDoesNotIntersect() {
+		
+		//setup 
+		final Range testRange = new Range(1,4);
+		final Range testRange2 = new Range(6,7);
+		boolean result = testRange2.intersects(testRange);
+		boolean expected = false;
+		
+		//verify
+		assertEquals(expected, result);
+	}
+	
+	//Killed mutant: removed call to org/jfree/data/Range::getLowerBound
+	@Test
+	public void testIntersectsRangeDoesNotIntersectButWouldIfLowerBoundWas0() {
+		
+		//setup 
+		final Range testRange = new Range(5,10);
+		final Range testRange2 = new Range(-1,4);
+		boolean result = testRange2.intersects(testRange);
+		boolean expected = false;
+		
+		//verify
+		assertEquals(expected, result);
+	}
+		
+	//Tests for intersects(double, double)
+	//SHOULD WORK BUT DOESN'T
+	@Test
+	public void testIntersectsWhenLowerBoundIncremented() {
+		
+		//setup 
+		final Range testRange = new Range(1,1);
+		boolean result = testRange.intersects(2,3);
+		boolean expected = false;
+		
+		//verify
+		assertEquals(expected, result);
+	}
+	
+	@Test
+	public void testIntersectsWhenLowerBoundDecremented() {
+		
+		//setup 
+		final Range testRange = new Range(1,1);
+		boolean result = testRange.intersects(-1,0);
+		boolean expected = false;
+		
+		//verify
+		assertEquals(expected, result);
+	}
 }
