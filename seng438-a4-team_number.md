@@ -19,7 +19,7 @@
 Original Statistics and Mutation Scores
 ---------------------------------------
 Test Suite Class: DataUtilities
-
+<img width="874" alt="Screenshot 2023-03-15 at 9 17 32 AM" src="https://user-images.githubusercontent.com/76859857/225356378-67b1581f-1414-4d1e-8a50-f2a90e03d48d.png">
 
 
 
@@ -28,7 +28,7 @@ Test Suite Class: Range
 Updated Statistics and Mutation Scores
 ---------------------------------------
 Test Suite Class: DataUtilities
-<img width="874" alt="Screenshot 2023-03-15 at 9 17 32 AM" src="https://user-images.githubusercontent.com/76859857/225356378-67b1581f-1414-4d1e-8a50-f2a90e03d48d.png">
+
 
 
 
