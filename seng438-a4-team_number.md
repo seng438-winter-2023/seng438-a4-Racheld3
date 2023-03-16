@@ -86,6 +86,7 @@ Range Classes That Improved Score
 
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
+Equivalent mutants are different from the original code syntactically, however they are not different semantically. That is, the mutated code performs the exact same as the original code. This could be changing the loop condition in a for loop from < to !=, this will often be an equivalent mutation. The reason these mutation affect the mutation score is because equivalent mutations cannot be killed due to the nature of their behaviour. Additionally, Pitest considers these mutations when calculating mutation score, which could be considered a misrepresentation of actual mutation coverage as, again, equivalent mutations cannot be killed.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
@@ -113,4 +114,4 @@ We initially found the Pitest mutation descriptions to be unclear at times. This
 
 # Comments/feedback on the lab itself
 
-It would have been helpful to have some more detailed resources about understanding Pitest mutation descriptions. As well it would have been helpful to determine a faster way to run Pistest as some group memebers were able to run the tests in 5-10 minutes, and for others it took 25-35 minutes. The lab was very time consuming our group found that it was taking hours to just improve mutation scores by 1%.
+It would have been helpful to have some more detailed resources about understanding Pitest mutation descriptions. As well it would have been helpful to determine a faster way to run Pistest as some group members were able to run the tests in 5-10 minutes, and for others it took 25-35 minutes. The lab was very time consuming our group found that it was taking hours to just improve mutation scores by 1%.
