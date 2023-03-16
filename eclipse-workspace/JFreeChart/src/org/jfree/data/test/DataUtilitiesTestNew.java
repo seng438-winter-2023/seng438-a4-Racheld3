@@ -929,12 +929,22 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	//and 15?
 	
 	@Test (expected = IllegalArgumentException.class)
-	public void calculateColumnTotalNullObject() {
+	public void calculateColumnTotalThreeArgsNullObject() {
 		// setup
 	    final Values2D values = null;
 	    int[] value = {0};
 	    // verify
 	    DataUtilities.calculateColumnTotal(values, 0, value);
+	    // tear-down: NONE in this test method
+		
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void calculateColumnTotalTwoArgsNullObject() {
+		// setup
+	    final Values2D values = null;
+	    // verify
+	    DataUtilities.calculateColumnTotal(values, 0);
 	    // tear-down: NONE in this test method
 		
 	}
@@ -958,5 +968,32 @@ public class DataUtilitiesTestNew extends DataUtilities {
 		
 		assertTrue(!result);
 	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testCloneWithNullArgument() {
+		final double[][] testArray = null;
+		clone(testArray);
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void calculateRowTotalThreeArgsNullObject() {
+		// setup
+	    final Values2D values = null;
+	    int[] value = {0};
+	    // verify
+	    DataUtilities.calculateRowTotal(values, 0, value);
+	    // tear-down: NONE in this test method
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void calculateRowTotalTwoArgsNullObject() {
+		// setup
+	    final Values2D values = null;
+	    // verify
+	    DataUtilities.calculateRowTotal(values, 0);
+	    // tear-down: NONE in this test method
+	}
+	
+	
 	
 }
