@@ -984,4 +984,19 @@ public class RangeTestNew{
 		//verify
 		assertEquals(expected, result);
 	}
+	
+	//Tests for toString()
+	@Test
+	public void testToString() {
+		
+		
+		//setup
+		final Range testRange = new Range(4,5);
+		String result = testRange.toString();
+		String expectedResult = new String("Range[4.0,5.0]");
+		
+		//verify
+		assertEquals(expectedResult, result);
+		
+		}
 }
