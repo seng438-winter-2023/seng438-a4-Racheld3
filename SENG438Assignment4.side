@@ -3,7 +3,183 @@
   "version": "2.0",
   "name": "SENG438Assignment4",
   "url": "https://www.ikea.com/ca/en",
-  "tests": [],
+  "tests": [{
+    "id": "a3795e34-d782-4502-af14-ad0f330f80ab",
+    "name": "Search for chair",
+    "commands": [{
+      "id": "cc3d12e9-e0cf-45ae-8c53-c93f673e9329",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ace6704b-54fb-438a-8740-5148f8da20da",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1172x560",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "420a8117-b078-49a7-8922-7e52de54e75c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Join IKEA Family",
+      "targets": [
+        ["linkText=Join IKEA Family", "linkText"],
+        ["css=.hnf-message__content__item:nth-child(2) > .hnf-link", "css:finder"],
+        ["xpath=//div[@id='value-proposition-message']/div/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/profile/signup/family/')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Join IKEA Family')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b850d63-6603-4b04-bb1d-622f50277435",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f0f63e9-2032-4ffe-8cc5-1deb57511fbf",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "chair"
+    }, {
+      "id": "e30bf3ad-cabe-4220-834c-7b8490ba11a9",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.search-field__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "a830e970-6b49-42f2-a38b-15097722138d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,316.79998779296875)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b7b186cc-9029-48a3-9501-e8f6dd2217ee",
+    "name": "Enter postal code",
+    "commands": [{
+      "id": "02d543da-4e58-43cf-804d-49741cada088",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ab3208f-119e-4f98-9e08-c475eabcaedb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38ae810d-20e7-4f55-a37e-504349728212",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#loyalty-modal-button > .hnf-btn__inner",
+      "targets": [
+        ["css=#loyalty-modal-button > .hnf-btn__inner", "css:finder"],
+        ["xpath=//a[@id='loyalty-modal-button']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Hej! Log in or sign up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c78df92-5239-47f9-b66a-0b3896107aba",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#loyalty-modal-button > .hnf-btn__inner",
+      "targets": [
+        ["css=#loyalty-modal-button > .hnf-btn__inner", "css:finder"],
+        ["xpath=//a[@id='loyalty-modal-button']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Hej! Log in or sign up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7b9acc1-0d89-4f89-a769-0262e082f9ac",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label", "css:finder"],
+        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c98ea501-bf5b-4b62-9333-aabc7fc70409",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label", "css:finder"],
+        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb467b09-0c4d-4eeb-8ef4-04a467893e56",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label", "css:finder"],
+        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03d0cd56-9206-4ee4-9d15-c071799b2ead",
+      "comment": "",
+      "command": "type",
+      "target": "id=hnf-txt-postalcodepicker-postcode",
+      "targets": [
+        ["id=hnf-txt-postalcodepicker-postcode", "id"],
+        ["css=#hnf-txt-postalcodepicker-postcode", "css:finder"],
+        ["xpath=//input[@id='hnf-txt-postalcodepicker-postcode']", "xpath:attributes"],
+        ["xpath=//div[@id='postalcodepicker-input-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "T2V 3H6"
+    }, {
+      "id": "b4c2d580-f8e2-4b62-b60f-abbba5268ee1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=hnf-txt-postalcodepicker-postcode",
+      "targets": [
+        ["id=hnf-txt-postalcodepicker-postcode", "id"],
+        ["css=#hnf-txt-postalcodepicker-postcode", "css:finder"],
+        ["xpath=//input[@id='hnf-txt-postalcodepicker-postcode']", "xpath:attributes"],
+        ["xpath=//div[@id='postalcodepicker-input-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }],
   "suites": [{
     "id": "064ab0e7-8bd0-4016-aa0c-d3e1ec806813",
     "name": "Default Suite",
@@ -12,6 +188,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["https://www.ikea.com/"],
+  "urls": ["https://www.ikea.com/", "https://www.ikea.com/ca/en"],
   "plugins": []
 }

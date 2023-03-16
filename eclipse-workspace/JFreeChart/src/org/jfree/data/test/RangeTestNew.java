@@ -1063,6 +1063,16 @@ public class RangeTestNew{
 	
 	//Tests for getCentralValue()
 	
+	//Killed the following mutants
+
+//	 Incremented (a++) double field upper → KILLED
+//
+//	 Incremented (a++) double field lower → KILLED
+//
+//	 Decremented (a--) double field upper → KILLED
+//
+//	 Decremented (a--) double field lower → KILLED
+
 	@Test
 	public void testGetCentralValueCallTwice() {
 		//setup
@@ -1073,5 +1083,31 @@ public class RangeTestNew{
 		
 		//verify
 		assertEquals(expectedResult, result, 0.001);
+	}
+	
+	
+	//Tests for contains()
+	@Test
+	public void testContainsIncrementValue() {
+		//setup
+		final Range testRange = new Range(4, 10.5);
+		boolean result = testRange.contains(10);
+		result = testRange.contains(10);
+		boolean expectedResult = true;
+		
+		//verify
+		assertEquals(expectedResult, result);
+	}
+	
+	@Test
+	public void testContainsDecrementValue() {
+		//setup
+		final Range testRange = new Range(4, 10.5);
+		boolean result = testRange.contains(11);
+		result = testRange.contains(11);
+		boolean expectedResult = false;
+		
+		//verify
+		assertEquals(expectedResult, result);
 	}
 }
