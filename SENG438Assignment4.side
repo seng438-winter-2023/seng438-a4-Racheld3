@@ -179,6 +179,129 @@
       ],
       "value": "${KEY_ENTER}"
     }]
+  }, {
+    "id": "02330606-5824-4144-a502-ac10780f5cf6",
+    "name": "Find a location",
+    "commands": [{
+      "id": "d1a10c48-5288-4bb7-8350-834a5dc96d8c",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7cd5b182-797b-4760-8233-ebdcb981301f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "440316fd-05e8-45dc-bacf-0efab0887fa5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-btn--open-menu > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-btn--open-menu > .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d13a0ea3-2a5c-4d42-b469-f110bc4efd82",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Find a location",
+      "targets": [
+        ["linkText=Find a location", "linkText"],
+        ["css=.hnf-menu__nav__aux > li:nth-child(3) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Find a location')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/stores/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find a location')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "33d4d09a-e498-4684-9ae2-dc37fbdf338c",
+    "name": "Inspiration and ideas for bedroom",
+    "commands": [{
+      "id": "efa7712b-ff28-4e25-ab6f-e95c1ca0c723",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d572d3e-8eea-44e2-9499-ff241831dd34",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1277x822",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97ab666a-1230-46b0-baf0-bb125d646529",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-btn--open-menu > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-btn--open-menu > .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f522f4c9-b6cb-49cb-b234-1a798493a0ab",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Inspiration & ideas",
+      "targets": [
+        ["linkText=Inspiration & ideas", "linkText"],
+        ["css=li:nth-child(5) > .hnf-menu__nav__main--small", "css:finder"],
+        ["xpath=//a[contains(text(),'Inspiration & ideas')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/ideas/?itm_campaign=inspo_nav_en&itm_element=nav_inspo_en&itm_content=inspo')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Inspiration & ideas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb43e591-be7a-4fb5-b50a-77c9ea53a48c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Inspiration by room",
+      "targets": [
+        ["linkText=Inspiration by room", "linkText"],
+        ["css=.hnf-menu__nav2:nth-child(5) li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Inspiration by room')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/rooms/')])[14]", "xpath:href"],
+        ["xpath=//nav[5]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Inspiration by room')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b07c64e-a7a7-4220-b9b5-e8a3385fff56",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,605.5)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e82c008-c1a4-409d-8508-5fe99a39ab9a",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .pub__card .pub__h2",
+      "targets": [
+        ["css=div:nth-child(1) > .pub__card .pub__h2", "css:finder"],
+        ["xpath=//div[@id='7e27d950-bb62-11e8-a4ff-1792947e85a8']/div/div/div/a/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79282883-9f70-4efe-bb2d-7075e70e7683",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2095)",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "064ab0e7-8bd0-4016-aa0c-d3e1ec806813",
