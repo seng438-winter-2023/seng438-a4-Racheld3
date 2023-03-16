@@ -87,6 +87,7 @@ Range Classes That Improved Score
 # A discussion of what could have been done to improve the mutation score of the test suites
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
+
 We need mutation testing to determine the effectiveness of software. Mutation testing allows us (developers/testers) to determine how effecitive our test suites are by getting the perecentage of mutants that tests can detect. When Mutation Coverage percentage is high that means that test suites are effective and can determine potential faults in code. It also has the advatage of helping testers determine which areas of code is not covered by test suites already written. This helps identify weaknesses in our code by outlining which sections of a method were not properly tested. A disadvantage of mutation testing is how time consuming the process is, and as code size increases the number of mutants will grow as well, and testing becomes much more time consuming. Mutation testing can also have false positive and negatives, this means mutants that are not actual faults but detected by tests will come up as false positives. This causes testers to waste a lot of time looking to fix non existent faults. For companies since mutation testing is very time consuming it can be very costly as well.
 
 # Explain your SELENUIM test case design process
@@ -105,8 +106,8 @@ For the mutation testing portion of the lab, we were required to improve the mut
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
-We initially found the Pitest mutation descriptions to be unclear at times. This caused slow progress in the beginning, but as we began to notice patterns in the descriptions, we were able to write tests more quickly. Another obstacle we faced was the slow execution time of Pitest. Waiting 20 or more minutes to test our test cases extended the time it took to complete this lab. Due to the long wait times, learning to multitask while working on this assignment was important. We also became proficient with Selenium and gained an understanding of GUI testing. While this concept was overwhelming in the beginning, we were soon able to use Selenium with confidence. 
+We initially found the Pitest mutation descriptions to be unclear at times. This caused slow progress in the beginning, but as we began to notice patterns in the descriptions, we were able to write tests more quickly. Another obstacle we faced was the slow execution time of Pitest. Waiting 20 or more minutes to test our test cases extended the time it took to complete this lab. Due to the long wait times, learning to multitask while working on this assignment was important. Another challenge was determining how much we needed to improve our DataUtilities tests as we already had a score of 89% which is an extremly good score as explain to us by the professor, so improving it by 10% did not seem possible as he explained getting a score of 90-95% would be great in mutation testing. We also became proficient with Selenium and gained an understanding of GUI testing. While this concept was overwhelming in the beginning, we were soon able to use Selenium with confidence. 
 
 # Comments/feedback on the lab itself
 
-It would have been helpful to have some more detailed resources about understanding Pitest mutation descriptions. 
+It would have been helpful to have some more detailed resources about understanding Pitest mutation descriptions. As well it would have been helpful to determine a faster way to run Pistest as some group memebers were able to run the tests in 5-10 minutes, and for others it took 25-35 minutes. The lab was very time consuming our group found that it was taking hours to just improve mutation scores by 1%.
