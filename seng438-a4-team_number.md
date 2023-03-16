@@ -49,10 +49,12 @@ The equals method checks to see if two Range objects are equal. That is, the low
 Original Statistics and Mutation Scores
 ---------------------------------------
 Test Suite Class: DataUtilities
+-------------------------------
 Original Mutation Coverage = 88% (with improved tests from assignment 3)
 <img width="874" alt="Screenshot 2023-03-15 at 9 17 32 AM" src="https://user-images.githubusercontent.com/76859857/225356378-67b1581f-1414-4d1e-8a50-f2a90e03d48d.png">
 
 Test Suite Class: Range
+----------------------------
 Original Mutation Coverage = 70% (with improved tests from assignment 3)
 ![Screenshot 2023-03-10 182323](https://user-images.githubusercontent.com/76859857/225745841-abb6066b-d8bb-46ee-8c9b-688adaa0b459.png)
 
