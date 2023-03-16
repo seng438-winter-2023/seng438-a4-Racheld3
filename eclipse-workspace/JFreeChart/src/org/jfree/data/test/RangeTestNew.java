@@ -986,6 +986,43 @@ public class RangeTestNew{
 	}
 	
 	//Tests for toString()
+	//Killed the following:
+//	removed call to java/lang/StringBuilder::<init> → KILLED
+//
+//	 replaced return value with "" for org/jfree/data/Range::toString → KILLED
+//
+//	 removed call to java/lang/StringBuilder::append → KILLED
+//
+//	 removed call to java/lang/StringBuilder::append → KILLED
+//
+//	 removed call to java/lang/StringBuilder::append → KILLED
+//
+//	 removed call to java/lang/StringBuilder::append → KILLED
+//
+//	 removed call to java/lang/StringBuilder::toString → KILLED
+//
+//	 mutated return of Object value for org/jfree/data/Range::toString to ( if (x != null) null else throw new RuntimeException ) → KILLED
+//
+//	 replaced call to java/lang/StringBuilder::append with receiver → KILLED
+//
+//	 replaced call to java/lang/StringBuilder::append with receiver → KILLED
+//
+//	 replaced call to java/lang/StringBuilder::append with receiver → KILLED
+//
+//	 replaced call to java/lang/StringBuilder::append with receiver → KILLED
+//
+//	 Negated double field lower → KILLED
+//
+//	 Negated double field upper → KILLED
+//
+//	 Incremented (++a) double field lower → KILLED
+//
+//	 Incremented (++a) double field upper → KILLED
+//
+//	 Decremented (--a) double fieldlower → KILLED
+//
+//	 Decremented (--a) double fieldupper → KILLED
+
 	@Test
 	public void testToString() {
 		
@@ -999,4 +1036,42 @@ public class RangeTestNew{
 		assertEquals(expectedResult, result);
 		
 		}
+	
+	//Killed the following mutants
+//	Incremented (++a) double field lower → KILLED
+//
+//	 Incremented (++a) double field upper → KILLED
+//
+//	 Decremented (--a) double fieldlower → KILLED
+//
+//	 Decremented (--a) double fieldupper → KILLED
+
+	@Test
+	public void testToStringCallTwice() {
+		
+		
+		//setup
+		final Range testRange = new Range(4,5);
+		String result = testRange.toString();
+		result = testRange.toString();
+		String expectedResult = new String("Range[4.0,5.0]");
+		
+		//verify
+		assertEquals(expectedResult, result);
+		
+		}
+	
+	//Tests for getCentralValue()
+	
+	@Test
+	public void testGetCentralValueCallTwice() {
+		//setup
+		final Range testRange = new Range(4, 10);
+		double result = testRange.getCentralValue();
+		result = testRange.getCentralValue();
+		double expectedResult = 7;
+		
+		//verify
+		assertEquals(expectedResult, result, 0.001);
+	}
 }
