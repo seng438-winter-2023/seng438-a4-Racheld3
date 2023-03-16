@@ -966,7 +966,10 @@ public class RangeTestNew{
 		
 		//setup 
 		final Range testRange = new Range(1,1);
-		boolean result = testRange.intersects(2,3);
+		double testValue1 = 2;
+		double testValue2 = 3;
+		boolean result = testRange.intersects(testValue1,testValue2);
+		result = testRange.intersects(testValue1,testValue2);
 		boolean expected = false;
 		
 		//verify
@@ -978,7 +981,10 @@ public class RangeTestNew{
 		
 		//setup 
 		final Range testRange = new Range(1,1);
-		boolean result = testRange.intersects(-1,0);
+		double testValue1 = -1;
+		double testValue2 = 0;
+		boolean result = testRange.intersects(testValue1,testValue2);
+		result = testRange.intersects(testValue1,testValue2);
 		boolean expected = false;
 		
 		//verify
@@ -1086,13 +1092,14 @@ public class RangeTestNew{
 	}
 	
 	
-	//Tests for contains()
+	//Tests for contains() //DOESN'T WORK YET
 	@Test
 	public void testContainsIncrementValue() {
 		//setup
 		final Range testRange = new Range(4, 10.5);
-		boolean result = testRange.contains(10);
-		result = testRange.contains(10);
+		double testValue = 10;
+		boolean result = testRange.contains(testValue);
+		result = testRange.contains(testValue);
 		boolean expectedResult = true;
 		
 		//verify
@@ -1103,11 +1110,45 @@ public class RangeTestNew{
 	public void testContainsDecrementValue() {
 		//setup
 		final Range testRange = new Range(4, 10.5);
-		boolean result = testRange.contains(11);
-		result = testRange.contains(11);
+		double testValue = 11;
+		boolean result = testRange.contains(testValue);
+		result = testRange.contains(testValue);
 		boolean expectedResult = false;
 		
 		//verify
 		assertEquals(expectedResult, result);
 	}
+	
+	//Tests for combine(Range, Range)
+	//Killed mutant: removed call to org/jfree/data/Range::getLowerBound → KILLED
+	@Test
+	public void testCombineRemoveLowerBoundCallAndCallTwice() {
+		
+		//setup
+		final Range testRange = new Range(3, 7);
+		final Range testRange2 = new Range(3, 7);
+		Range result = Range.combine(testRange2, testRange);
+		result = Range.combine(testRange2, testRange);
+		Range expectedResult = new Range(3, 7);
+		
+		//verify
+		assertEquals(expectedResult, result);
+		
+		}
+	
+	//Killed mutant: removed call to org/jfree/data/Range::getUpperBound → KILLED
+	@Test
+	public void testCombineRemoveUpperBoundCallAndCallTwice() {
+		
+		//setup
+		final Range testRange = new Range(-3, -2);
+		final Range testRange2 = new Range(-3, -2);
+		Range result = Range.combine(testRange2, testRange);
+		result = Range.combine(testRange2, testRange);
+		Range expectedResult = new Range(-3, -2);
+		
+		//verify
+		assertEquals(expectedResult, result);
+		
+		}
 }

@@ -91,6 +91,8 @@ We need mutation testing to determine the effectiveness of software. Mutation te
 
 # Explain your SELENUIM test case design process
 
+We decided to test the basic functionalities of the IKEA website, including searching for items, logging in, entering a postal code, and others. As with unit testing, it is important to test small parts of the website at a time to isolate issues. We tested individual features and ensured that they had minimal interactions with other functionalities on the website.
+
 # Explain the use of assertions and checkpoints
 
 # how did you test each functionaity with different test data
@@ -99,6 +101,12 @@ We need mutation testing to determine the effectiveness of software. Mutation te
 
 # How the team work/effort was divided and managed
 
+For the mutation testing portion of the lab, we were required to improve the mutation test score by 10% for the Range and DataUtilities classes. Each person was responsible for improving the score for one class by 5%. For the GUI testing portion, each person was responsible for creating 2 tests with Selenium. We split up the work for the report evenly among us. As issues arose, we collaborated to solve them, communicating through text, in person meetings, and video calls. 
+
 # Difficulties encountered, challenges overcome, and lessons learned
 
+We initially found the Pitest mutation descriptions to be unclear at times. This caused slow progress in the beginning, but as we began to notice patterns in the descriptions, we were able to write tests more quickly. Another obstacle we faced was the slow execution time of Pitest. Waiting 20 or more minutes to test our test cases extended the time it took to complete this lab. Due to the long wait times, learning to multitask while working on this assignment was important. We also became proficient with Selenium and gained an understanding of GUI testing. While this concept was overwhelming in the beginning, we were soon able to use Selenium with confidence. 
+
 # Comments/feedback on the lab itself
+
+It would have been helpful to have some more detailed resources about understanding Pitest mutation descriptions. 
