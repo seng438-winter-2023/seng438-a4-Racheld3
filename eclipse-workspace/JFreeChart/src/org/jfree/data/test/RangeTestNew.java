@@ -1151,4 +1151,166 @@ public class RangeTestNew{
 		assertEquals(expectedResult, result);
 		
 		}
+	
+	//Tests for expand()
+	
+	//Killed mutant: removed call to org/jfree/chart/util/ParamChecks::nullNotPermitted → KILLED
+	@Test (expected = IllegalArgumentException.class)
+	public void testExpandException() {
+		//setup
+		Range testRange = null;
+		double lower = 0;
+		double upper = -5;
+		
+		Range.expand(testRange, lower, upper);
+	}
+	
+	//Killed mutant: Negated double local variable number 7 → KILLED
+	@Test
+	public void testExpandTwice() {
+		
+		//setup
+		final Range testRange = new Range(2,4);
+		double lower = 0;
+		double upper = -5;
+		Range result = Range.expand(testRange, lower, upper);
+		Range expectedResult = new Range(-2.0,-2.0);	
+		//verify
+		assertEquals(expectedResult, result);
+			
+	}
+	//Killed mutant: none yet :D
+	@Test
+	public void testExpandSameLowerAndUpperRange() {
+		
+		//setup
+		final Range testRange = new Range(4,6);
+		double lower = 0;
+		double upper = -1;
+		Range result = Range.expand(testRange, lower, upper);
+		Range expectedResult = new Range(4,4);
+		
+		//verify
+		assertEquals(expectedResult, result);
+		
+	}
+	// thought I was onto something with this one
+	@Test
+	public void testExpandSameLowerAndUpperThreeTimes() {
+		
+		//setup
+		final Range testRange = new Range(4,6);
+		double lower = 0;
+		double upper = -1;
+		Range result = Range.expand(testRange, lower, upper);
+		result = Range.expand(testRange, lower, upper);
+		result = Range.expand(testRange, lower, upper);
+		Range expectedResult = new Range(4,4);
+		
+		//verify
+		assertEquals(expectedResult, result);
+		
+	}
+	
+	//Tests for expandToInclude()
+	
+	//Killed mutant: none yet :D
+	@Test
+	public void testExpandToIncludeLowerTwice() {
+		
+		//setup
+		final Range testRange = new Range(4,10);
+		Range result = Range.expandToInclude(testRange, 0);
+		Range.expandToInclude(testRange, 0);
+		Range expectedResult = new Range(0,10);
+		
+		//verify
+		assertEquals(expectedResult, result);
+			
+	}
+	
+	//Killed mutant: none yet :D
+	@Test
+	public void testExpandToIncludeUpperTwice() {
+		
+		//setup
+		final Range testRange = new Range(4,10);
+		Range result = Range.expandToInclude(testRange, 15);
+		Range.expandToInclude(testRange, 15);
+		Range expectedResult = new Range(4,15);
+		
+		//verify
+		assertEquals(expectedResult, result);
+		
+	}
+	
+	//Tests for isNaNRange()
+	
+	@Test
+	public void testIsNaNRangeBothNotNaN() {
+		
+		//setup
+		Range testRange =new Range(1, 1);
+		//verify
+		boolean result = testRange.isNaNRange();
+		boolean expected = false;
+		
+		//verify
+		assertEquals(expected, result);
+	}
+	
+	@Test
+	public void testIsNaNRangeLBNaN() {
+		
+		//setup
+		Range testRange =new Range(Double.NaN, 1);
+		//verify
+		boolean result = testRange.isNaNRange();
+		boolean expected = false;
+		
+		//verify
+		assertEquals(expected, result);
+	}
+	
+	@Test
+	public void testIsNaNRangeUBNaN() {
+		
+		//setup
+		Range testRange =new Range(1, Double.NaN);
+		//verify
+		boolean result = testRange.isNaNRange();
+		boolean expected = false;
+		
+		//verify
+		assertEquals(expected, result);
+	}
+	
+	@Test
+	public void testIsNaNRangeBothTwice() {
+		
+		//setup
+		Range testRange =new Range(Double.NaN, Double.NaN);
+		//verify
+		boolean result = testRange.isNaNRange();
+		result = testRange.isNaNRange();
+		boolean expected = false;
+		
+		//verify
+		assertEquals(expected, result);
+	}
+	
+	@Test
+	public void testIsNaNRangeNoneTwice() {
+		
+		//setup
+		Range testRange =new Range(1, 1);
+		//verify
+		boolean result = testRange.isNaNRange();
+		result = testRange.isNaNRange();
+		boolean expected = false;
+		
+		//verify
+		assertEquals(expected, result);
+	}
+	
 }
