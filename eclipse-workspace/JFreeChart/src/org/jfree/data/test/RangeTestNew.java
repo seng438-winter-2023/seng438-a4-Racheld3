@@ -458,6 +458,7 @@ public class RangeTestNew{
 		Range result = Range.shift(testRange, delta);
 		Range expectedResult = new Range(-3, 6);
 		
+		
 		//verify
 		assertEquals(result, expectedResult);
 	}

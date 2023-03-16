@@ -928,8 +928,35 @@ public class DataUtilitiesTestNew extends DataUtilities {
 	//13???? 155
 	//and 15?
 	
+	@Test (expected = IllegalArgumentException.class)
+	public void calculateColumnTotalNullObject() {
+		// setup
+	    final Values2D values = null;
+	    int[] value = {0};
+	    // verify
+	    DataUtilities.calculateColumnTotal(values, 0, value);
+	    // tear-down: NONE in this test method
+		
+	}
 	
+	@Test
+	public void testEqualsSameFirstArray() {
+		double[][] testArray1 = {{1,2,3},{4,5,6}};
+		double[][] testArray2 = {{1,2,3}};
+		
+		boolean result = DataUtilities.equal(testArray1, testArray2);
+		
+		assertTrue(!result);
+	}
 	
-	
+	@Test
+	public void testEqualsWithFirstArrayLengthZero() {
+		double[][] testArray1 = {{}};
+		double[][] testArray2 = {{1}};
+		
+		boolean result = DataUtilities.equal(testArray1, testArray2);
+		
+		assertTrue(!result);
+	}
 	
 }
