@@ -30,15 +30,20 @@ This mutant is a post-fix increment to the field lower in getCentralValue. Since
 Mutant 5: Line 144 - replaced boolean return with false for org/jfree/data/Range::contains -> KILLED by testContainsBelowUpperBoundOfRange
 The test method testContainsBelowUpperBoundOfRange creates a Range object with lower bound -72.55 and upper bound of -23. It then calls the contains method with an argument of -23.778. Initially this test passes as -23.778 is obviously within the range as stated above, but this mutant changes the return value from contains to false, meaning the test fails as it is expecting a return value of true, killing this mutant.
 
-Mutant 6:
+Mutant 6: Line 161 - Less than to less or equal -> SURVIVED
+This mutation changes part of the condition to check if variable b0 is less than this.upper to check if variable b0 is less than or equal to this.upper. For this to affect the test results for methods that test intersects, we would first need b0 to be greater than this.lower. Additionally we would need b0 to be equal to this.upper. None of our test cases cover this specific situation meaning all tests that interact with intersects will still pass even with this mutation in place. Thus, this mutation survives.
 
-Mutant 7:
+Mutant 7: Line 176 - replaced boolean return with false for org/jfree/data/Range::intersects -> KILLED by testIntersectsWithRangeParam
+This tests method testIntersectsWithRangeParam creates two Range objexts, one with lower bound 1, upper bound 4, and another with lower bound 2, upper bound 3. Since these two ranges intersects, the test expects the return from intersects to be true, however, this mutant changes the return value to false, meaning this test will fail and the mutant is killed.
 
-Mutant 8: 
+Mutant 8: Line 312 - replaced return value with null for org/jfree/data/Range::expandToInclude -> KILLED by testExpandToIncludeAllSame
+This test method testExpandToIncludeAllSame expects an expanded Range object. This mutation returns null instead of the resulting expanded Range object, and as a result, the test fails and this mutation is killed.
 
-Mutant 9:
+Mutant 9: Line 411 - removed call to java/lang/IllegalArgumentException -> KILLED by testScaleWithFactorLessThanZero
+This mutation removes the call to IllegalArgumentException when factor is negative. The test testScaleWithFactorLessThanZero calls the scale method with a value for factor of -1, therefore the test expects scale to throw an IllegalArgumentException. Since the mutation removes the call to the exception, this test fails and the mutant is killed.
 
-Mutant 10:
+Mutant 10: Line 431 - replaced boolean return with true for org/jfree/data/Range::equals -> KILLED by testEqualsLowerBoundNotEqual
+The equals method checks to see if two Range objects are equal. That is, the lower bounds and upper bounds of both Range objects are equal. The test, testEqualsLowerBoundNotEqual, creates two Range objects, one with lower bound -3, and one with lower bound -7. Since these two lower bounds are not equal, the method equals should return false. However, this mutation changes the boolean value from false to true after verifying that the lower bounds of both Range objects are not equal. Since the method now returns false, the test fails and this mutation is killed.
 
 # Report all the statistics and the mutation score for each test class
 Original Statistics and Mutation Scores
