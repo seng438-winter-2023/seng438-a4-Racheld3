@@ -98,12 +98,15 @@ We need mutation testing to determine the effectiveness of software. Mutation te
 We decided to test the basic functionalities of the IKEA website, including searching for items, logging in, entering a postal code, and others. As with unit testing, it is important to test small parts of the website at a time to isolate issues. We tested individual features and ensured that they had minimal interactions with other functionalities on the website.
 
 # Explain the use of assertions and checkpoints
+Checkpoints are the GUI Testing equivalent of assertions in Unit Testing. These allow us to verify the output of tests by having these checkpoints throughout our test. Selenium supported automated verification, and created these check points at different 
 
 # how did you test each functionaity with different test data
 Each functionality was tested with different test data by changing different fields in Selenium. Such as "Value" and "Target". When the "Value" would be changed to an incorrect input the test would fail, or if we changed the "Target" while trying to test a different functionality that would also cause a test fail.
 ADD MORE HERE
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+
+On the other hand, Sikulix does not have a recording function, meaning all tests have to be entered manually. This can be very time consuming compared to creating tests in Selenium.
 
 # How the team work/effort was divided and managed
 For the mutation testing portion of the lab, we were required to improve the mutation test score by 10% for the Range and DataUtilities classes. Each person was responsible for improving the score for one class by 5%. For the GUI testing portion, each person was responsible for creating 2 tests with Selenium. We split up the work for the report evenly among us. As issues arose, we collaborated to solve them, communicating through text, in person meetings, and video calls. 
