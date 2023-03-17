@@ -734,17 +734,6 @@
       ],
       "value": ""
     }, {
-      "id": "f955f084-2f84-40ca-aac4-0985eec9dd85",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=#businessSignup > .btn__inner",
-      "targets": [
-        ["css=#businessSignup > .btn__inner", "css:finder"],
-        ["xpath=//button[@id='businessSignup']/span", "xpath:idRelative"],
-        ["xpath=//button[3]/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "6e429fd1-6911-4dd3-9baa-36221cbb9d78",
       "comment": "",
       "command": "click",
