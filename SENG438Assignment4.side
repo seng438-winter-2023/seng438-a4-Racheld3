@@ -391,6 +391,548 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "e09fda39-9c27-4a0d-8bc7-2f592e100f79",
+    "name": "Login with invalid phone number",
+    "commands": [{
+      "id": "81cd726c-27c1-4d04-baa0-469dcdf15203",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8f906d9-48d8-4126-89cc-17b5992620d1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1277x822",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ed8167b-b1b9-4628-8836-0b73a0a56e3b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "424fb452-844e-470f-a3d6-aebf8b664f91",
+      "comment": "",
+      "command": "click",
+      "target": "css=#loyalty-modal-button > .hnf-btn__inner",
+      "targets": [
+        ["css=#loyalty-modal-button > .hnf-btn__inner", "css:finder"],
+        ["xpath=//a[@id='loyalty-modal-button']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Hej! Log in or sign up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c23e0d2-fc9d-4fe2-92ab-365cd0d6392c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#header__button > .btn__inner",
+      "targets": [
+        ["css=#header__button > .btn__inner", "css:finder"],
+        ["xpath=//a[@id='header__button']/span", "xpath:idRelative"],
+        ["xpath=//section/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c500c1a6-b0b2-457c-831c-67c479048647",
+      "comment": "",
+      "command": "click",
+      "target": "css=#header__button > .btn__inner",
+      "targets": [
+        ["css=#header__button > .btn__inner", "css:finder"],
+        ["xpath=//a[@id='header__button']/span", "xpath:idRelative"],
+        ["xpath=//section/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4839240f-9875-40e3-824d-3d5c8eafc740",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "41cf54e2-378e-452e-a507-9cc843297ae2",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "44444444444444444444"
+    }, {
+      "id": "09fd1f16-a516-44d7-a21b-7d9558abe03b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Alternative login with a one-time code",
+      "targets": [
+        ["linkText=Alternative login with a one-time code", "linkText"],
+        ["name=alternativeLoginLink", "name"],
+        ["css=.sc-chPdSV:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Alternative login with a one-time code')]", "xpath:link"],
+        ["xpath=//a[@name='alternativeLoginLink']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//form/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Alternative login with a one-time code')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07c89815-ab29-43c3-a559-d3d31aac763e",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21e3fc69-4e3a-4b44-bed1-e702fdd646f4",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "linkText=Forgot your password?",
+      "targets": [
+        ["linkText=Forgot your password?", "linkText"],
+        ["name=forgotPassword", "name"],
+        ["css=.sc-chPdSV:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'Forgot your password?')]", "xpath:link"],
+        ["xpath=//a[@name='forgotPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//form/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Forgot your password?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b93dce1-267f-4026-b1df-4d780b87875a",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67a5d55b-11e1-44c6-aedd-2fedeb27687e",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "kim123"
+    }, {
+      "id": "a9b70ada-b98c-4f21-ad00-e693c3ce7bfc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn--emphasised .btn__label",
+      "targets": [
+        ["css=.btn--emphasised .btn__label", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/button/span/span", "xpath:idRelative"],
+        ["xpath=//form/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edb68c7a-70db-4f3d-9faa-3e20aa5d54b8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn--emphasised > .btn__inner",
+      "targets": [
+        ["css=.btn--emphasised > .btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/button/span", "xpath:idRelative"],
+        ["xpath=//form/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "06581eea-f3b2-401e-9133-5816ec1d8488",
+    "name": "Create an account for business",
+    "commands": [{
+      "id": "4b905571-692d-438a-90f3-cbca2dff0b2d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ea6c84d-6c0d-4bc2-9168-c955447e9bd4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1277x822",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d6232bb-bac1-4613-b44c-eab92ab232f6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58cd8195-946f-4341-bde6-96469858602e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#loyalty-modal-button > .hnf-btn__inner",
+      "targets": [
+        ["css=#loyalty-modal-button > .hnf-btn__inner", "css:finder"],
+        ["xpath=//a[@id='loyalty-modal-button']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Hej! Log in or sign up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bcbb798-e6f0-47ba-b51a-31766f303f6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#header__button > .btn__inner",
+      "targets": [
+        ["css=#header__button > .btn__inner", "css:finder"],
+        ["xpath=//a[@id='header__button']/span", "xpath:idRelative"],
+        ["xpath=//section/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5314be97-1b5b-40db-8f48-3463cc5ea83f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#businessSignup .btn__label",
+      "targets": [
+        ["css=#businessSignup .btn__label", "css:finder"],
+        ["xpath=//button[@id='businessSignup']/span/span", "xpath:idRelative"],
+        ["xpath=//button[3]/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8c0bf16-bf6e-4171-8daa-b43cac747cae",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#businessSignup .btn__label",
+      "targets": [
+        ["css=#businessSignup .btn__label", "css:finder"],
+        ["xpath=//button[@id='businessSignup']/span/span", "xpath:idRelative"],
+        ["xpath=//button[3]/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8da94326-5669-489b-8649-c3cb852cbada",
+      "comment": "",
+      "command": "click",
+      "target": "id=business-loyalty-signup-form-businessName",
+      "targets": [
+        ["id=business-loyalty-signup-form-businessName", "id"],
+        ["name=businessName", "name"],
+        ["css=#business-loyalty-signup-form-businessName", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-businessName']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[8]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1e5f2f1-bebd-4a60-bbd6-55fcc14dc7d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=business-loyalty-signup-form-businessName",
+      "targets": [
+        ["id=business-loyalty-signup-form-businessName", "id"],
+        ["name=businessName", "name"],
+        ["css=#business-loyalty-signup-form-businessName", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-businessName']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[8]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "BBBBBBBBBBBBBBBBBB"
+    }, {
+      "id": "9e2ec721-3c55-4de4-ae67-553863e5ad57",
+      "comment": "",
+      "command": "click",
+      "target": "id=business-loyalty-signup-form-vatNumber",
+      "targets": [
+        ["id=business-loyalty-signup-form-vatNumber", "id"],
+        ["name=vatNumber", "name"],
+        ["css=#business-loyalty-signup-form-vatNumber", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-vatNumber']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[10]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67f93b7f-eac9-4e90-92ef-380ca94d21ba",
+      "comment": "",
+      "command": "type",
+      "target": "id=business-loyalty-signup-form-vatNumber",
+      "targets": [
+        ["id=business-loyalty-signup-form-vatNumber", "id"],
+        ["name=vatNumber", "name"],
+        ["css=#business-loyalty-signup-form-vatNumber", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-vatNumber']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[10]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "99999999999"
+    }, {
+      "id": "42bd02c7-515e-421c-b3ca-7979d1d11dd5",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "id=business-loyalty-signup-form-industrySegment",
+      "targets": [
+        ["id=business-loyalty-signup-form-industrySegment", "id"],
+        ["name=industrySegment", "name"],
+        ["css=#business-loyalty-signup-form-industrySegment", "css:finder"],
+        ["xpath=//select[@id='business-loyalty-signup-form-industrySegment']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[12]/div/div/select", "xpath:idRelative"],
+        ["xpath=//div[12]/div/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b107980b-b9d3-4641-a05b-543232e94e7b",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "id=business-loyalty-signup-form-vatNumber-default-gutter-5",
+      "targets": [
+        ["id=business-loyalty-signup-form-vatNumber-default-gutter-5", "id"],
+        ["css=#business-loyalty-signup-form-vatNumber-default-gutter-5", "css:finder"],
+        ["xpath=//div[@id='business-loyalty-signup-form-vatNumber-default-gutter-5']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[11]", "xpath:idRelative"],
+        ["xpath=//div[11]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ca4a824-d986-487a-9497-a4db141b3f24",
+      "comment": "",
+      "command": "click",
+      "target": "name=business-loyalty-signup-form",
+      "targets": [
+        ["name=business-loyalty-signup-form", "name"],
+        ["css=form", "css:finder"],
+        ["xpath=//form[@name='business-loyalty-signup-form']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcbfe68b-c2aa-4a52-ac66-dda6b9f43d86",
+      "comment": "",
+      "command": "select",
+      "target": "id=business-loyalty-signup-form-industrySegment",
+      "targets": [],
+      "value": "label=Hospitality - Food & beverage"
+    }, {
+      "id": "77e3616e-1380-49ac-9903-6a514300b26d",
+      "comment": "",
+      "command": "click",
+      "target": "id=business-loyalty-signup-form-firstName",
+      "targets": [
+        ["id=business-loyalty-signup-form-firstName", "id"],
+        ["name=firstName", "name"],
+        ["css=#business-loyalty-signup-form-firstName", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-firstName']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[15]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[15]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dad9bb6d-fb67-4b55-a180-50ddb81fac0b",
+      "comment": "",
+      "command": "type",
+      "target": "id=business-loyalty-signup-form-firstName",
+      "targets": [
+        ["id=business-loyalty-signup-form-firstName", "id"],
+        ["name=firstName", "name"],
+        ["css=#business-loyalty-signup-form-firstName", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-firstName']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[15]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[15]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Bob"
+    }, {
+      "id": "73744321-52bd-4fdd-adc3-4894903098cf",
+      "comment": "",
+      "command": "click",
+      "target": "id=business-loyalty-signup-form-lastName",
+      "targets": [
+        ["id=business-loyalty-signup-form-lastName", "id"],
+        ["name=lastName", "name"],
+        ["css=#business-loyalty-signup-form-lastName", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-lastName']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[17]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[17]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2de2939e-c127-4dca-91f4-e4a8046c06ce",
+      "comment": "",
+      "command": "type",
+      "target": "id=business-loyalty-signup-form-lastName",
+      "targets": [
+        ["id=business-loyalty-signup-form-lastName", "id"],
+        ["name=lastName", "name"],
+        ["css=#business-loyalty-signup-form-lastName", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-lastName']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[17]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[17]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Sam"
+    }, {
+      "id": "e99083e8-d8ee-4b87-afb5-13adc555f5eb",
+      "comment": "",
+      "command": "click",
+      "target": "id=business-loyalty-signup-form-email",
+      "targets": [
+        ["id=business-loyalty-signup-form-email", "id"],
+        ["name=email", "name"],
+        ["css=#business-loyalty-signup-form-email", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-email']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[19]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[19]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ee2523e-e95a-4c5a-adc5-397a9b40ef73",
+      "comment": "",
+      "command": "type",
+      "target": "id=business-loyalty-signup-form-email",
+      "targets": [
+        ["id=business-loyalty-signup-form-email", "id"],
+        ["name=email", "name"],
+        ["css=#business-loyalty-signup-form-email", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-email']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[19]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[19]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Bobsam@gmail.com"
+    }, {
+      "id": "eaaba791-8e61-4b21-bd23-df170e8063d3",
+      "comment": "",
+      "command": "click",
+      "target": "id=business-loyalty-signup-form-password",
+      "targets": [
+        ["id=business-loyalty-signup-form-password", "id"],
+        ["name=password", "name"],
+        ["css=#business-loyalty-signup-form-password", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[21]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[21]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98613b16-465d-4da7-8f3d-8086e4d2c172",
+      "comment": "",
+      "command": "type",
+      "target": "id=business-loyalty-signup-form-password",
+      "targets": [
+        ["id=business-loyalty-signup-form-password", "id"],
+        ["name=password", "name"],
+        ["css=#business-loyalty-signup-form-password", "css:finder"],
+        ["xpath=//input[@id='business-loyalty-signup-form-password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[21]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[21]/div/div/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "eea2b148-aea3-42af-b2d2-fe183b4592de",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Read more about marketing communications",
+      "targets": [
+        ["linkText=Read more about marketing communications", "linkText"],
+        ["css=.form-field:nth-child(23) .link", "css:finder"],
+        ["xpath=//a[contains(text(),'Read more about marketing communications')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[23]/span/span[2]/label/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[5]", "xpath:href"],
+        ["xpath=//div[23]/span/span[2]/label/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Read more about marketing communications')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "88e6316e-db90-4bf1-9a13-bfcf902f05fd",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.form-field:nth-child(25) div",
+      "targets": [
+        ["css=.form-field:nth-child(25) div", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[25]/span/span[2]/label/div", "xpath:idRelative"],
+        ["xpath=//div[25]/span/span[2]/label/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2096e11f-c2c9-4dd5-979b-b134b150a79c",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "id=business-loyalty-signup-form-communications-default-gutter-12",
+      "targets": [
+        ["id=business-loyalty-signup-form-communications-default-gutter-12", "id"],
+        ["css=#business-loyalty-signup-form-communications-default-gutter-12", "css:finder"],
+        ["xpath=//div[@id='business-loyalty-signup-form-communications-default-gutter-12']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[24]", "xpath:idRelative"],
+        ["xpath=//div[24]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21d3ff5d-deda-41bd-bbba-22e625a9ede2",
+      "comment": "",
+      "command": "click",
+      "target": "name=business-loyalty-signup-form",
+      "targets": [
+        ["name=business-loyalty-signup-form", "name"],
+        ["css=form", "css:finder"],
+        ["xpath=//form[@name='business-loyalty-signup-form']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7643e7d5-2f95-4755-b6c3-6a48b0d0d4bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-field:nth-child(25) div",
+      "targets": [
+        ["css=.form-field:nth-child(25) div", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[25]/span/span[2]/label/div", "xpath:idRelative"],
+        ["xpath=//div[25]/span/span[2]/label/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa33185e-0417-4ad4-94d5-486bd70c847b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#singup-form-submit-button > .btn__inner",
+      "targets": [
+        ["css=#singup-form-submit-button > .btn__inner", "css:finder"],
+        ["xpath=//button[@id='singup-form-submit-button']/span", "xpath:idRelative"],
+        ["xpath=//form/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Complete sign up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "064ab0e7-8bd0-4016-aa0c-d3e1ec806813",
