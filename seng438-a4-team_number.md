@@ -109,6 +109,8 @@ ADD MORE HERE
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 We found that Selenium
 
+On the other hand, Sikulix does not have a recording function, meaning all tests have to be entered manually. This can be very time consuming compared to creating tests in Selenium.
+
 # How the team work/effort was divided and managed
 For the mutation testing portion of the lab, we were required to improve the mutation test score by 10% for the Range and DataUtilities classes. Each person was responsible for improving the score for one class by 5%. For the GUI testing portion, each person was responsible for creating 2 tests with Selenium. We split up the work for the report evenly among us. As issues arose, we collaborated to solve them, communicating through text, in person meetings, and video calls. 
 
