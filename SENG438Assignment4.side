@@ -998,189 +998,97 @@
       "value": ""
     }]
   }, {
-    "id": "9085a5b4-519b-49ea-8a9b-09b1eab22576",
-    "name": "Enter postal code for select store",
+    "id": "9573ea75-e6ac-4e8f-b59a-d3148a2b8607",
+    "name": "Login with valid phone number",
     "commands": [{
-      "id": "fc52ca7d-6ede-4249-ae94-eec538184f1e",
+      "id": "d7f04401-2450-4919-90c9-d610119cee0b",
       "comment": "",
       "command": "open",
       "target": "https://www.ikea.com/ca/en/",
       "targets": [],
       "value": ""
     }, {
-      "id": "9b77fec2-196f-487b-8ec6-c4bcda38427a",
+      "id": "4b86046c-ae6e-4bd3-af61-8677c8cab9d6",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1172x681",
+      "target": "1200x785",
       "targets": [],
       "value": ""
     }, {
-      "id": "33bb9f08-dae3-4f43-a0f4-8b94f72c27ea",
+      "id": "c5de3232-d06e-491d-81c1-2331e57858ad",
       "comment": "",
       "command": "runScript",
       "target": "window.scrollTo(0,0)",
       "targets": [],
       "value": ""
     }, {
-      "id": "9cf23e2b-8d2c-4af6-8415-975bc5393ebe",
+      "id": "876dc9b4-caba-44ae-9539-6ef86cd9c362",
       "comment": "",
       "command": "mouseOver",
-      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .svg-icon",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store .svg-icon",
       "targets": [
-        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .svg-icon", "css:finder"]
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store .svg-icon", "css:finder"]
       ],
       "value": ""
     }, {
-      "id": "c7dd78f5-4c15-4ff2-8c61-40a842226686",
-      "comment": "",
-      "command": "click",
-      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store .hnf-btn__label",
-      "targets": [
-        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store .hnf-btn__label", "css:finder"],
-        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span/span", "xpath:idRelative"],
-        ["xpath=//li[2]/div/button/span/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "1331238c-1151-4eea-9304-b7654eb935af",
-      "comment": "",
-      "command": "type",
-      "target": "id=hnf-txt-storepicker-postcode",
-      "targets": [
-        ["id=hnf-txt-storepicker-postcode", "id"],
-        ["css=#hnf-txt-storepicker-postcode", "css:finder"],
-        ["xpath=//input[@id='hnf-txt-storepicker-postcode']", "xpath:attributes"],
-        ["xpath=//div[@id='storepicker-postalCode-form']/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/div/input", "xpath:position"]
-      ],
-      "value": "1234"
-    }, {
-      "id": "4138249d-f874-40ec-90d0-396de17a16b4",
-      "comment": "",
-      "command": "click",
-      "target": "css=#hnf-btn-storepicker-method-postcode .hnf-btn__label",
-      "targets": [
-        ["css=#hnf-btn-storepicker-method-postcode .hnf-btn__label", "css:finder"],
-        ["xpath=//button[@id='hnf-btn-storepicker-method-postcode']/span/span", "xpath:idRelative"],
-        ["xpath=//div[2]/div[3]/button/span/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "5285777e-4f30-429e-80fb-44e85f0035b2",
-      "comment": "",
-      "command": "click",
-      "target": "id=hnf-txt-storepicker-postcode",
-      "targets": [
-        ["id=hnf-txt-storepicker-postcode", "id"],
-        ["css=#hnf-txt-storepicker-postcode", "css:finder"],
-        ["xpath=//input[@id='hnf-txt-storepicker-postcode']", "xpath:attributes"],
-        ["xpath=//div[@id='storepicker-postalCode-form']/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "1c147224-8c29-4484-b8fd-70f7a86968ad",
-      "comment": "",
-      "command": "type",
-      "target": "id=hnf-txt-storepicker-postcode",
-      "targets": [
-        ["id=hnf-txt-storepicker-postcode", "id"],
-        ["css=#hnf-txt-storepicker-postcode", "css:finder"],
-        ["xpath=//input[@id='hnf-txt-storepicker-postcode']", "xpath:attributes"],
-        ["xpath=//div[@id='storepicker-postalCode-form']/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/div/input", "xpath:position"]
-      ],
-      "value": "t2z3t5"
-    }, {
-      "id": "2be0dae6-5c9b-4415-a2c8-892273bad2b5",
-      "comment": "",
-      "command": "click",
-      "target": "css=#hnf-btn-storepicker-method-postcode .hnf-btn__label",
-      "targets": [
-        ["css=#hnf-btn-storepicker-method-postcode .hnf-btn__label", "css:finder"],
-        ["xpath=//button[@id='hnf-btn-storepicker-method-postcode']/span/span", "xpath:idRelative"],
-        ["xpath=//div[2]/div[3]/button/span/span", "xpath:position"]
-      ],
-      "value": ""
-    }]
-  }, {
-    "id": "2893a2f3-3cdf-484d-abf9-0fb84748cbd0",
-    "name": "Join ikea family with invalid birthdate format",
-    "commands": [{
-      "id": "25fa23ae-9dc7-44ce-b6d5-dff4a3045289",
-      "comment": "",
-      "command": "open",
-      "target": "https://www.ikea.com/ca/en/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6eaee4c4-4ba4-4f42-92c2-479f8161879b",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1550x838",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b5c1c73c-84ca-4a55-9793-5c02c84c5f18",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.personalised_hej_fragment--card__title",
-      "targets": [
-        ["css=.personalised_hej_fragment--card__title", "css:finder"],
-        ["xpath=//a[@id='personalised_hej_fragment--campaign-card-link']/div[2]/div/h2", "xpath:idRelative"],
-        ["xpath=//h2", "xpath:position"],
-        ["xpath=//h2[contains(.,'Cuddle up in the comfortable KIVIK sofa. The generous size, invites you and your guests to many hours of socializing and relaxation.')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a370cbeb-1724-4e6e-8b4f-9bee88bdf89b",
+      "id": "58ec6431-0ca4-4f61-8d49-c85a4dcf4616",
       "comment": "",
       "command": "mouseOut",
-      "target": "css=.personalised_hej_fragment--card__title",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store .svg-icon",
       "targets": [
-        ["css=.personalised_hej_fragment--card__title", "css:finder"],
-        ["xpath=//a[@id='personalised_hej_fragment--campaign-card-link']/div[2]/div/h2", "xpath:idRelative"],
-        ["xpath=//h2", "xpath:position"],
-        ["xpath=//h2[contains(.,'Cuddle up in the comfortable KIVIK sofa. The generous size, invites you and your guests to many hours of socializing and relaxation.')]", "xpath:innerText"]
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store .svg-icon", "css:finder"]
       ],
       "value": ""
     }, {
-      "id": "43720e6d-9dc2-4815-9a38-9d7da07b3af9",
+      "id": "199c6ac5-49e7-4533-8b03-380df4d33210",
       "comment": "",
       "command": "mouseOver",
-      "target": "css=.personalised_hej_fragment--card__info",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner",
       "targets": [
-        ["css=.personalised_hej_fragment--card__info", "css:finder"],
-        ["xpath=//a[@id='personalised_hej_fragment--campaign-card-link']/div[2]", "xpath:idRelative"],
-        ["xpath=//a/div[2]", "xpath:position"]
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Calgary')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "5b40beef-546e-4615-8189-600a7af5ecdc",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small > .hnf-btn__inner",
-      "targets": [
-        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small > .hnf-btn__inner", "css:finder"],
-        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span", "xpath:idRelative"],
-        ["xpath=//li/div/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'T2Z3T5')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "edbc621e-d003-41cd-a689-f53b27828159",
+      "id": "4249a6fa-55fe-4923-b22a-62c86f089c45",
       "comment": "",
       "command": "mouseOut",
-      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small > .hnf-btn__inner",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner",
       "targets": [
-        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small > .hnf-btn__inner", "css:finder"],
-        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span", "xpath:idRelative"],
-        ["xpath=//li/div/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'T2Z3T5')]", "xpath:innerText"]
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Calgary')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "df52a51f-714b-402d-b4ad-c09609a12b44",
+      "id": "8305bb87-c346-4c50-b82c-cf84a5addba3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Calgary')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca23ea56-b3e5-44a3-8b36-70462ed4cf47",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Calgary')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4287d4a8-5bf5-417b-b5ff-4a4c72fb764e",
       "comment": "",
       "command": "click",
       "target": "css=#loyalty-modal-button > .hnf-btn__inner",
@@ -1192,164 +1100,118 @@
       ],
       "value": ""
     }, {
-      "id": "d35c0695-63fb-4a05-88c4-8f2f1cda8ed8",
+      "id": "756ee0ac-02aa-4a10-8263-2729d50eacd8",
       "comment": "",
       "command": "click",
-      "target": "css=.header__link:nth-child(1) h3",
+      "target": "css=#header__button > .btn__inner",
       "targets": [
-        ["css=.header__link:nth-child(1) h3", "css:finder"],
-        ["xpath=//div[@id='little-man-slider']/div/section/ul/li/a/div/div/h3", "xpath:idRelative"],
-        ["xpath=//li/a/div/div/h3", "xpath:position"],
-        ["xpath=//h3[contains(.,'Join IKEA Family')]", "xpath:innerText"]
+        ["css=#header__button > .btn__inner", "css:finder"],
+        ["xpath=//a[@id='header__button']/span", "xpath:idRelative"],
+        ["xpath=//section/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "e89450e2-603e-4c9a-8998-208eec505263",
+      "id": "2099033e-dfa8-43ad-883f-a318df50f3fe",
       "comment": "",
       "command": "click",
-      "target": "id=family-signup-form-firstName",
+      "target": "id=username",
       "targets": [
-        ["id=family-signup-form-firstName", "id"],
-        ["name=firstName", "name"],
-        ["css=#family-signup-form-firstName", "css:finder"],
-        ["xpath=//input[@id='family-signup-form-firstName']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/div[5]/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div/input", "xpath:position"]
+        ["id=username", "id"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "2e3fa60a-3784-45ce-907f-0f67915c41a9",
+      "id": "7a94dee2-4146-466c-a2d6-b95e41690aee",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32e16152-779c-42ba-b85c-0a006409d656",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c718649-b8c8-489b-8ba0-3c57f300f173",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d45044f9-9591-4189-8acc-3a9b535d7bdd",
       "comment": "",
       "command": "type",
-      "target": "id=family-signup-form-firstName",
+      "target": "id=username",
       "targets": [
-        ["id=family-signup-form-firstName", "id"],
-        ["name=firstName", "name"],
-        ["css=#family-signup-form-firstName", "css:finder"],
-        ["xpath=//input[@id='family-signup-form-firstName']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/div[5]/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div/input", "xpath:position"]
+        ["id=username", "id"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
       ],
-      "value": "John"
+      "value": "+14038873456"
     }, {
-      "id": "145fcad4-3a98-49c0-98c4-3d8147b7f8dd",
+      "id": "64a9c00f-dfd9-4b28-bbf5-9c8fc225b046",
       "comment": "",
       "command": "click",
-      "target": "id=family-signup-form-lastName",
+      "target": "id=password",
       "targets": [
-        ["id=family-signup-form-lastName", "id"],
-        ["name=lastName", "name"],
-        ["css=#family-signup-form-lastName", "css:finder"],
-        ["xpath=//input[@id='family-signup-form-lastName']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/div[7]/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div[2]/div/input", "xpath:position"]
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[7]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "a16d698b-32c1-4419-bea2-1be5c4b4a27f",
+      "id": "5c408de2-73cf-479a-a189-fb5bc0184d73",
       "comment": "",
       "command": "type",
-      "target": "id=family-signup-form-lastName",
+      "target": "id=password",
       "targets": [
-        ["id=family-signup-form-lastName", "id"],
-        ["name=lastName", "name"],
-        ["css=#family-signup-form-lastName", "css:finder"],
-        ["xpath=//input[@id='family-signup-form-lastName']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/div[7]/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div[2]/div/input", "xpath:position"]
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[7]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/input", "xpath:position"]
       ],
-      "value": "Doe"
+      "value": "bob123"
     }, {
-      "id": "27b9e7e2-135d-4ad1-843e-831a8a948eb7",
+      "id": "23ea23f3-088d-4b67-90d3-c56baf72e2f9",
       "comment": "",
       "command": "click",
-      "target": "id=family-signup-form-birthDate",
+      "target": "css=.btn--emphasised > .btn__inner",
       "targets": [
-        ["id=family-signup-form-birthDate", "id"],
-        ["name=birthDate", "name"],
-        ["css=#family-signup-form-birthDate", "css:finder"],
-        ["xpath=//input[@id='family-signup-form-birthDate']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/div[9]/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div[9]/div/div[2]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "82d3b5cc-ca28-4cd7-9a42-8478f26a2385",
-      "comment": "",
-      "command": "type",
-      "target": "id=family-signup-form-birthDate",
-      "targets": [
-        ["id=family-signup-form-birthDate", "id"],
-        ["name=birthDate", "name"],
-        ["css=#family-signup-form-birthDate", "css:finder"],
-        ["xpath=//input[@id='family-signup-form-birthDate']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/div[9]/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div[9]/div/div[2]/div/input", "xpath:position"]
-      ],
-      "value": "December 1"
-    }, {
-      "id": "2a282c05-78bd-4849-8444-35dc2af5f144",
-      "comment": "",
-      "command": "click",
-      "target": "css=#singup-form-submit-button > .btn__inner",
-      "targets": [
-        ["css=#singup-form-submit-button > .btn__inner", "css:finder"],
-        ["xpath=//button[@id='singup-form-submit-button']/span", "xpath:idRelative"],
+        ["css=.btn--emphasised > .btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/button/span", "xpath:idRelative"],
         ["xpath=//form/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Continue to email address verification')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "54cd08e6-d53b-49ca-a6c8-72187b44ee13",
-      "comment": "",
-      "command": "click",
-      "target": "id=family-signup-form-birthDate",
-      "targets": [
-        ["id=family-signup-form-birthDate", "id"],
-        ["name=birthDate", "name"],
-        ["css=#family-signup-form-birthDate", "css:finder"],
-        ["xpath=//input[@id='family-signup-form-birthDate']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/div[9]/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div[9]/div/div[2]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c645c95d-7bf3-4238-8f93-f7e8535d26a8",
-      "comment": "",
-      "command": "click",
-      "target": "id=family-signup-form-birthDate",
-      "targets": [
-        ["id=family-signup-form-birthDate", "id"],
-        ["name=birthDate", "name"],
-        ["css=#family-signup-form-birthDate", "css:finder"],
-        ["xpath=//input[@id='family-signup-form-birthDate']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/div[9]/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div[9]/div/div[2]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "f09261ec-54b7-467c-aa45-6326726c1489",
-      "comment": "",
-      "command": "type",
-      "target": "id=family-signup-form-birthDate",
-      "targets": [
-        ["id=family-signup-form-birthDate", "id"],
-        ["name=birthDate", "name"],
-        ["css=#family-signup-form-birthDate", "css:finder"],
-        ["xpath=//input[@id='family-signup-form-birthDate']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/div[9]/div/div[2]/div/input", "xpath:idRelative"],
-        ["xpath=//div[9]/div/div[2]/div/input", "xpath:position"]
-      ],
-      "value": "01-12-2002"
-    }, {
-      "id": "7b3e626c-f96c-4cc3-a121-c366f3f6efe2",
-      "comment": "",
-      "command": "click",
-      "target": "css=.btn__label:nth-child(1)",
-      "targets": [
-        ["css=.btn__label:nth-child(1)", "css:finder"],
-        ["xpath=//button[@id='singup-form-submit-button']/span/span", "xpath:idRelative"],
-        ["xpath=//form/button/span/span", "xpath:position"]
+        ["xpath=//span[contains(.,'Continue')]", "xpath:innerText"]
       ],
       "value": ""
     }]
