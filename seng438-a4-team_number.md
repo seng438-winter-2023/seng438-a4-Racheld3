@@ -80,7 +80,6 @@ Test Suite Class: Range
 # Analysis drawn on the effectiveness of each of the test classes
 DataUtilities Classes That Improved Score
 -------------------------
-
 The new test suite brings the mutation score from 88% originally, up to 93%. At this point in test writing, many of the remaining mutations that have not yet been killed are equivalent mutations. Since these cannot be removed, there is a certain percentage of the mutation score that cannot be achieved by any amount of tests. This does not comprise of all the remaining 7 percent of the mutation score, however is does account for a portion of it.
 
 
