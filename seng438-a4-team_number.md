@@ -67,6 +67,7 @@ Test Suite Class: DataUtilities
 Updated Mutation Coverage = 93% (with improved tests written)
 <img width="993" alt="Screenshot 2023-03-17 at 9 54 49 AM" src="https://user-images.githubusercontent.com/76859857/225955523-c6a7b433-48a8-4fd3-962c-4b840c9180a0.png">
 
+For DataUtilities as seen in the image above we were able to achieve 93% which is a more then acceptable mutation coverage score as we discussed in lecture, going further and trying to get to 100% becomes extremly difficult because there is only a limited amount of mutations left and they become very hard to catch and kill.
 
 Test Suite Class: Range
 ----------------------------
