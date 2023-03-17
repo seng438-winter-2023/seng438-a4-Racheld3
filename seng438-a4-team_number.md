@@ -89,29 +89,28 @@ Range Classes That Improved Score
 Equivalent mutants are different from the original code syntactically, however they are not different semantically. That is, the mutated code performs the exact same as the original code. This could be changing the loop condition in a for loop from < to !=, this will often be an equivalent mutation. The reason these mutation affect the mutation score is because equivalent mutations cannot be killed due to the nature of their behaviour. Additionally, Pitest considers these mutations when calculating mutation score, which could be considered a misrepresentation of actual mutation coverage as, again, equivalent mutations cannot be killed.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
+Looking at which mutants survived and which were killed by tests from assignment 3, thats how we determined how to improve mutation score. For DataUtilities our original score was 89% which is an extremly good mutation score. How we improved this even further was going and looking at the surviving mutations and based on those that survived we were able to determine which boundaries we had forgotten to kill in our original tests.
+For Range (ADD SOMETHING HERE)
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
-
 We need mutation testing to determine the effectiveness of software. Mutation testing allows us (developers/testers) to determine how effecitive our test suites are by getting the perecentage of mutants that tests can detect. When Mutation Coverage percentage is high that means that test suites are effective and can determine potential faults in code. It also has the advatage of helping testers determine which areas of code is not covered by test suites already written. This helps identify weaknesses in our code by outlining which sections of a method were not properly tested. A disadvantage of mutation testing is how time consuming the process is, and as code size increases the number of mutants will grow as well, and testing becomes much more time consuming. Mutation testing can also have false positive and negatives, this means mutants that are not actual faults but detected by tests will come up as false positives. This causes testers to waste a lot of time looking to fix non existent faults. For companies since mutation testing is very time consuming it can be very costly as well.
 
 # Explain your SELENUIM test case design process
-
 We decided to test the basic functionalities of the IKEA website, including searching for items, logging in, entering a postal code, and others. As with unit testing, it is important to test small parts of the website at a time to isolate issues. We tested individual features and ensured that they had minimal interactions with other functionalities on the website.
 
 # Explain the use of assertions and checkpoints
 
 # how did you test each functionaity with different test data
+Each functionality was tested with different test data by changing different fields in Selenium. Such as "Value" and "Target". When the "Value" would be changed to an incorrect input the test would fail, or if we changed the "Target" while trying to test a different functionality that would also cause a test fail.
+ADD MORE HERE
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
 # How the team work/effort was divided and managed
-
 For the mutation testing portion of the lab, we were required to improve the mutation test score by 10% for the Range and DataUtilities classes. Each person was responsible for improving the score for one class by 5%. For the GUI testing portion, each person was responsible for creating 2 tests with Selenium. We split up the work for the report evenly among us. As issues arose, we collaborated to solve them, communicating through text, in person meetings, and video calls. 
 
 # Difficulties encountered, challenges overcome, and lessons learned
-
 We initially found the Pitest mutation descriptions to be unclear at times. This caused slow progress in the beginning, but as we began to notice patterns in the descriptions, we were able to write tests more quickly. Another obstacle we faced was the slow execution time of Pitest. Waiting 20 or more minutes to test our test cases extended the time it took to complete this lab. Due to the long wait times, learning to multitask while working on this assignment was important. Another challenge was determining how much we needed to improve our DataUtilities tests as we already had a score of 89% which is an extremly good score as explain to us by the professor, so improving it by 10% did not seem possible as he explained getting a score of 90-95% would be great in mutation testing. We also became proficient with Selenium and gained an understanding of GUI testing. While this concept was overwhelming in the beginning, we were soon able to use Selenium with confidence. 
 
 # Comments/feedback on the lab itself
-
 It would have been helpful to have some more detailed resources about understanding Pitest mutation descriptions. As well it would have been helpful to determine a faster way to run Pistest as some group members were able to run the tests in 5-10 minutes, and for others it took 25-35 minutes. The lab was very time consuming our group found that it was taking hours to just improve mutation scores by 1%.
