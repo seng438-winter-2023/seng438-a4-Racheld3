@@ -63,7 +63,9 @@ Original Mutation Coverage = 70% (with improved tests from assignment 3)
 Updated Statistics and Mutation Scores
 ---------------------------------------
 Test Suite Class: DataUtilities
-Updated Mutation Coverage = (with improved tests written)
+----------------------------------------
+Updated Mutation Coverage = 93% (with improved tests written)
+<img width="993" alt="Screenshot 2023-03-17 at 9 54 49 AM" src="https://user-images.githubusercontent.com/76859857/225955523-c6a7b433-48a8-4fd3-962c-4b840c9180a0.png">
 
 
 
