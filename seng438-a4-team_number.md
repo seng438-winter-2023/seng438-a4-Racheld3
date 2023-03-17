@@ -95,12 +95,14 @@ Looking at which mutants survived and which were killed by tests from assignment
 We need mutation testing to determine the effectiveness of software. Mutation testing allows us (developers/testers) to determine how effecitive our test suites are by getting the perecentage of mutants that tests can detect. When Mutation Coverage percentage is high that means that test suites are effective and can determine potential faults in code. It also has the advatage of helping testers determine which areas of code is not covered by test suites already written. This helps identify weaknesses in our code by outlining which sections of a method were not properly tested. A disadvantage of mutation testing is how time consuming the process is, and as code size increases the number of mutants will grow as well, and testing becomes much more time consuming. Mutation testing can also have false positive and negatives, this means mutants that are not actual faults but detected by tests will come up as false positives. This causes testers to waste a lot of time looking to fix non existent faults. For companies since mutation testing is very time consuming it can be very costly as well.
 
 # Explain your SELENUIM test case design process
-We decided to test the basic functionalities of the IKEA website, including searching for items, logging in, entering a postal code, and others. As with unit testing, it is important to test small parts of the website at a time to isolate issues. We tested individual features and ensured that they had minimal interactions with other functionalities on the website.
+We decided to test the basic functionalities of the IKEA website, including searching for items, logging in, entering a postal code, and others. As with unit testing, it is important to test small parts of the website at a time to isolate issues. We tested individual features and ensured that they had minimal interactions with other functionalities on the website. For each test, we tried an invalid input and a valid input, so that if the website no longer catches the invalid input, the defect will be detected. 
 
 # Explain the use of assertions and checkpoints
 Checkpoints are the GUI Testing equivalent of assertions in Unit Testing. These allow us to verify the output of tests by having these checkpoints throughout our test. Selenium supported automated verification, and created these check points at different stages of the test.
 
 # how did you test each functionaity with different test data
+For each test, we entered an invalid input followed by a valid input while recording the test case. This ensures that if the website changes to accept and invalid input, or no longer accepts a valid input, the defect will be detected. 
+
 Each functionality was tested with different test data by changing different fields in Selenium. Such as "Value" and "Target". When the "Value" would be changed to an incorrect input the test would fail, or if we changed the "Target" while trying to test a different functionality that would also cause a test fail.
 ADD MORE HERE
 
