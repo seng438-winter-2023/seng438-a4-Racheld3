@@ -4,107 +4,6 @@
   "name": "SENG438Assignment4",
   "url": "https://www.ikea.com/ca/en",
   "tests": [{
-    "id": "b7b186cc-9029-48a3-9501-e8f6dd2217ee",
-    "name": "Enter postal code",
-    "commands": [{
-      "id": "02d543da-4e58-43cf-804d-49741cada088",
-      "comment": "",
-      "command": "open",
-      "target": "https://www.ikea.com/ca/en/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3ab3208f-119e-4f98-9e08-c475eabcaedb",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1550x838",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "38ae810d-20e7-4f55-a37e-504349728212",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=#loyalty-modal-button > .hnf-btn__inner",
-      "targets": [
-        ["css=#loyalty-modal-button > .hnf-btn__inner", "css:finder"],
-        ["xpath=//a[@id='loyalty-modal-button']/span", "xpath:idRelative"],
-        ["xpath=//li[2]/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Hej! Log in or sign up')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "6c78df92-5239-47f9-b66a-0b3896107aba",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=#loyalty-modal-button > .hnf-btn__inner",
-      "targets": [
-        ["css=#loyalty-modal-button > .hnf-btn__inner", "css:finder"],
-        ["xpath=//a[@id='loyalty-modal-button']/span", "xpath:idRelative"],
-        ["xpath=//li[2]/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Hej! Log in or sign up')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "d7b9acc1-0d89-4f89-a769-0262e082f9ac",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label",
-      "targets": [
-        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label", "css:finder"],
-        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span/span", "xpath:idRelative"],
-        ["xpath=//button/span/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c98ea501-bf5b-4b62-9333-aabc7fc70409",
-      "comment": "",
-      "command": "click",
-      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label",
-      "targets": [
-        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label", "css:finder"],
-        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span/span", "xpath:idRelative"],
-        ["xpath=//button/span/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "bb467b09-0c4d-4eeb-8ef4-04a467893e56",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label",
-      "targets": [
-        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label", "css:finder"],
-        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span/span", "xpath:idRelative"],
-        ["xpath=//button/span/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "03d0cd56-9206-4ee4-9d15-c071799b2ead",
-      "comment": "",
-      "command": "type",
-      "target": "id=hnf-txt-postalcodepicker-postcode",
-      "targets": [
-        ["id=hnf-txt-postalcodepicker-postcode", "id"],
-        ["css=#hnf-txt-postalcodepicker-postcode", "css:finder"],
-        ["xpath=//input[@id='hnf-txt-postalcodepicker-postcode']", "xpath:attributes"],
-        ["xpath=//div[@id='postalcodepicker-input-form']/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/div/input", "xpath:position"]
-      ],
-      "value": "T2V 3H6"
-    }, {
-      "id": "b4c2d580-f8e2-4b62-b60f-abbba5268ee1",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "id=hnf-txt-postalcodepicker-postcode",
-      "targets": [
-        ["id=hnf-txt-postalcodepicker-postcode", "id"],
-        ["css=#hnf-txt-postalcodepicker-postcode", "css:finder"],
-        ["xpath=//input[@id='hnf-txt-postalcodepicker-postcode']", "xpath:attributes"],
-        ["xpath=//div[@id='postalcodepicker-input-form']/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/div/input", "xpath:position"]
-      ],
-      "value": "${KEY_ENTER}"
-    }]
-  }, {
     "id": "10d6bdba-b69f-44f1-9290-8332b4cb0b03",
     "name": "Track Order",
     "commands": [{
@@ -388,6 +287,209 @@
         ["xpath=//div[@id='root']/div/main/div[2]/section/div/div/form/button/span", "xpath:idRelative"],
         ["xpath=//form/button/span", "xpath:position"],
         ["xpath=//span[contains(.,'Look up order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ba493bd6-4f64-49dd-aac4-2cc5c9687fa5",
+    "name": "Enter postal code",
+    "commands": [{
+      "id": "770e3d5b-897e-4440-8d59-87395ab1938c",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fc84015-9d70-461c-82c5-da6385cee96d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1172x516",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7abb587c-1067-4fbe-8ef4-8511c84c3439",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35ac1b59-7da2-4091-9114-79c7af5103b6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label", "css:finder"],
+        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f4fefa8-3b51-4e31-a43b-ef25ecb5b942",
+      "comment": "",
+      "command": "type",
+      "target": "id=hnf-txt-postalcodepicker-postcode",
+      "targets": [
+        ["id=hnf-txt-postalcodepicker-postcode", "id"],
+        ["css=#hnf-txt-postalcodepicker-postcode", "css:finder"],
+        ["xpath=//input[@id='hnf-txt-postalcodepicker-postcode']", "xpath:attributes"],
+        ["xpath=//div[@id='postalcodepicker-input-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "aksjfhlaksj"
+    }, {
+      "id": "102ab18c-d944-4b6c-8aa5-ea8f142c5142",
+      "comment": "",
+      "command": "click",
+      "target": "css=#hnf-btn-postalcodepicker-use > .hnf-btn__inner",
+      "targets": [
+        ["css=#hnf-btn-postalcodepicker-use > .hnf-btn__inner", "css:finder"],
+        ["xpath=//button[@id='hnf-btn-postalcodepicker-use']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Save')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7c9ddbc-81df-4de2-875d-cdd395c01f90",
+      "comment": "",
+      "command": "type",
+      "target": "id=hnf-txt-postalcodepicker-postcode",
+      "targets": [
+        ["id=hnf-txt-postalcodepicker-postcode", "id"],
+        ["css=#hnf-txt-postalcodepicker-postcode", "css:finder"],
+        ["xpath=//input[@id='hnf-txt-postalcodepicker-postcode']", "xpath:attributes"],
+        ["xpath=//div[@id='postalcodepicker-input-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "T2V 3H6"
+    }, {
+      "id": "95f94039-d46e-431b-b015-90578c24a4b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#hnf-btn-postalcodepicker-use > .hnf-btn__inner",
+      "targets": [
+        ["css=#hnf-btn-postalcodepicker-use > .hnf-btn__inner", "css:finder"],
+        ["xpath=//button[@id='hnf-btn-postalcodepicker-use']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Save')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "680803de-aaf2-4e87-a36f-98d1e18dbeb4",
+    "name": "Create wish list",
+    "commands": [{
+      "id": "fc8583d4-1510-45af-af55-b6ffa3f94d4f",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1f2d51f-631c-4604-a903-557ac809e989",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1172x516",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09a53d93-a3a2-4357-9524-dad97ba21920",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4c6c877-3216-4ba5-841a-a6ee86637fdd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-header__shopping-list-link .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-header__shopping-list-link .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shopping list')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb439550-a4b0-414b-997d-d4ad76d3338f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#loyalty-modal-button > .hnf-btn__inner",
+      "targets": [
+        ["css=#loyalty-modal-button > .hnf-btn__inner", "css:finder"],
+        ["xpath=//a[@id='loyalty-modal-button']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Hej! Log in or sign up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d99f0337-b46f-4d0c-87a0-df35ce89ed25",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-ingka-leading-icon > .list-ingka-btn__inner",
+      "targets": [
+        ["css=.list-ingka-leading-icon > .list-ingka-btn__inner", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create list')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc41fd77-01f8-4fb9-8d2c-e69301a38a76",
+      "comment": "",
+      "command": "type",
+      "target": "id=new-list-form-input",
+      "targets": [
+        ["id=new-list-form-input", "id"],
+        ["css=#new-list-form-input", "css:finder"],
+        ["xpath=//input[@id='new-list-form-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "this test is too long this test is too long this test is too long"
+    }, {
+      "id": "83d4db51-c525-48b8-a769-4ac5a2b94ded",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-ingka-btn--icon-tertiary:nth-child(1) path",
+      "targets": [
+        ["css=.list-ingka-btn--icon-tertiary:nth-child(1) path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "54b9031b-467a-4c12-8487-44aa8857b10a",
+      "comment": "",
+      "command": "click",
+      "target": "id=new-list-form-input",
+      "targets": [
+        ["id=new-list-form-input", "id"],
+        ["css=#new-list-form-input", "css:finder"],
+        ["xpath=//input[@id='new-list-form-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b11d0f8-7f74-4b66-a3d0-06cf85f71f1a",
+      "comment": "",
+      "command": "type",
+      "target": "id=new-list-form-input",
+      "targets": [
+        ["id=new-list-form-input", "id"],
+        ["css=#new-list-form-input", "css:finder"],
+        ["xpath=//input[@id='new-list-form-input']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/div/div[2]/div/div/div/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "8316581a-89cf-4fbf-a688-4cbb4788f820",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-ingka-btn--icon-tertiary:nth-child(1) .list-ingka-svg-icon",
+      "targets": [
+        ["css=.list-ingka-btn--icon-tertiary:nth-child(1) .list-ingka-svg-icon", "css:finder"]
       ],
       "value": ""
     }]
