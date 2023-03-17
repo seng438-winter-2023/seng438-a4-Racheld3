@@ -11,7 +11,7 @@
 | Isaiah Lemieux            |
 
 # Introduction
-
+Once again in a much similar fashion to the previous assignments in this course, we were given another opportunity to put into practice: the knowledge we have been acquiring throughout our lectures. This assignment provided us with the opportunity to familiarize ourselves with several new tools, namely, Pitest, Selenium and Sikulix. Using Pitest, we were introduced to mutation testing and how to inject mutation faults in a Java code-base. Using the test codes from the previous assignments, we were given the task to identify and interpret equivalent mutants through the reported mutation scores. These reports gave us a detailed summary of which mutants 'Survived' and which we managed to 'Kill' in our test suite. And after this, we were then able to design new test cases to increase the mutation scores of the classes under test. For the second part of this assignment, we used Selenium and Sikulix to practice automated GUI and Web Testing techniques. The Selenium tools allowed us to automate different functionalities of the application under test, which in our case was the IKEA website, by using the different recording and replay features. We then compared this tool to the alternative: Sikulix.
 
 # Analysis of 10 Mutants of the Range class 
 
