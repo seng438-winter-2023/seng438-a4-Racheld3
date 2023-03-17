@@ -63,7 +63,9 @@ Original Mutation Coverage = 70% (with improved tests from assignment 3)
 Updated Statistics and Mutation Scores
 ---------------------------------------
 Test Suite Class: DataUtilities
-Updated Mutation Coverage = (with improved tests written)
+----------------------------------------
+Updated Mutation Coverage = 93% (with improved tests written)
+<img width="993" alt="Screenshot 2023-03-17 at 9 54 49 AM" src="https://user-images.githubusercontent.com/76859857/225955523-c6a7b433-48a8-4fd3-962c-4b840c9180a0.png">
 
 
 
@@ -101,19 +103,13 @@ We decided to test the basic functionalities of the IKEA website, including sear
 Checkpoints are the GUI Testing equivalent of assertions in Unit Testing. These allow us to verify the output of tests by having these checkpoints throughout our test. Selenium supported automated verification, and created these check points at different stages of the test.
 
 # how did you test each functionaity with different test data
-<<<<<<< Updated upstream
-For each test, we entered an invalid input followed by a valid input while recording the test case. This ensures that if the website changes to accept and invalid input, or no longer accepts a valid input, the defect will be detected. 
-
-Each functionality was tested with different test data by changing different fields in Selenium. Such as "Value" and "Target". When the "Value" would be changed to an incorrect input the test would fail, or if we changed the "Target" while trying to test a different functionality that would also cause a test fail.
-=======
 For each test, we entered an invalid input followed by a valid input while recording the test case. This ensures that if the website changes to accept and invalid input, or no longer accepts a valid input, the defect will be detected. Each functionality was tested with different test data by changing different fields in Selenium. Such as "Value" and "Target". When the "Value" would be changed to an incorrect input the test would fail, or if we changed the "Target" while trying to test a different functionality that would also cause a test fail.
 ADD MORE HERE
->>>>>>> Stashed changes
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 Selenium had a very straight forward installation process as it is a simple plugin on Firefox or Chrome. It is quite user friendly and easy to navigate and use, and it can very efficiently record all activity on the web pages being tested, including mouse clicking and scrolling. However, several of our team mates had a few issues when using this tool. For example, Selenium crashed for one of our team mates every time they attempted to record more than 5 different steps of a test's functionality. For another team mate, Selenium proved to be quite laggy once a recording was stopped. Our team also found it tricky to investigate what went wrong when tests failed, or find the root cause of issues. Overall, it was quick to learn and worked quite well for the tasks in this assignment.
 
-On the other hand, Sikulix does not have a recording function, meaning all tests have to be entered manually. This can be very time consuming compared to creating tests in Selenium.
+On the other hand, Sikulix is a java program, meaning in order to run it you must download the jar file first, then click on it to run the program. Upon the opening of Sikulix, the user interface is relatively empty and simple. There is space to create and edit a test script to be run, and some buttons to add screenshots and modify target location for clicks and other functions. Sikulix also does not have a recording function, meaning all tests have to be entered manually. This can be very time consuming compared to creating tests in Selenium. One advantage of Sikulix as compared to Selenium is its ability to run test on any process with a GUI. Because it is not a built-in extension for Firefox and Chrome, it can be run on applications such as File Explorer and is not limited to testing for web pages. 
 
 # How the team work/effort was divided and managed
 For the mutation testing portion of the lab, we were required to improve the mutation test score by 10% for the Range and DataUtilities classes. Each person was responsible for improving the score for one class by 5%. For the GUI testing portion, each person was responsible for creating 2 tests with Selenium. We split up the work for the report evenly among us. As issues arose, we collaborated to solve them, communicating through text, in person meetings, and video calls. 
