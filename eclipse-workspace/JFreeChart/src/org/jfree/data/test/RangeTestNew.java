@@ -1212,49 +1212,9 @@ public class RangeTestNew{
 		
 	}
 	
-    @Test
-    public void testExpandZeroLB() {
-    	//setup
-    	Range testRange1 = new Range(0.0, 100.0);
-    	Range testRange2 = Range.expand(testRange1, 0.10, 0.10);
-    	//verify
-    	assertEquals(-10.0, testRange2.getLowerBound(), 0.001);
-    }
-    
-    @Test
-    public void testExpandTwiceZeroLB() {
-    	//setup
-    	Range testRange1 = new Range(0.0, 100.0);
-    	Range testRange2 = Range.expand(testRange1, 0.10, 0.10);
-    	//verify
-        assertEquals(110.0, testRange2.getUpperBound(), 0.001);
-    }
-    
-    @Test
-    public void testExpandLowerGreaterThanUpperLB() {
-    	//setup
-    	Range testRange1 = new Range(0.0, 100.0);
-    	Range testRange2 = Range.expand(testRange1, 0.10, 0.10);
-    	testRange2 = Range.expand(testRange1, -0.8, -0.5);
-    	//verify
-        assertEquals(65.0, testRange2.getLowerBound(), 0.001);
-
-    }
-    
-    @Test
-    public void testExpandLowerGreaterThanUpperUB() {
-    	//setup
-    	Range testRange1 = new Range(0.0, 100.0);
-    	Range testRange2 = Range.expand(testRange1, 0.10, 0.10);
-    	testRange2 = Range.expand(testRange1, -0.8, -0.5);
-    	//verify
-        assertEquals(65.0, testRange2.getUpperBound(), 0.001);
-    }
-    
-	
 	//Tests for expandToInclude()
 	
-	//Killed mutant: none yet :D
+	//Killed mutant:
 	@Test
 	public void testExpandToIncludeLowerTwice() {
 		
@@ -1269,7 +1229,7 @@ public class RangeTestNew{
 			
 	}
 	
-	//Killed mutant: none yet :D
+	//Killed mutant:
 	@Test
 	public void testExpandToIncludeUpperTwice() {
 		
@@ -1290,7 +1250,7 @@ public class RangeTestNew{
 	public void testIsNaNRangeBothNotNaN() {
 		
 		//setup
-		Range testRange =new Range(1.0, 2.0);
+		Range testRange =new Range(1, 2);
 		//verify
 		boolean result = testRange.isNaNRange();
 		boolean expected = false;
@@ -1303,7 +1263,7 @@ public class RangeTestNew{
 	public void testIsNaNRangeLBNaN() {
 		
 		//setup
-		Range testRange =new Range(Double.NaN, 2.0);
+		Range testRange =new Range(Double.NaN, 2);
 		//verify
 		boolean result = testRange.isNaNRange();
 		boolean expected = false;
@@ -1316,7 +1276,7 @@ public class RangeTestNew{
 	public void testIsNaNRangeUBNaN() {
 		
 		//setup
-		Range testRange =new Range(1.0, Double.NaN);
+		Range testRange =new Range(1, Double.NaN);
 		//verify
 		boolean result = testRange.isNaNRange();
 		boolean expected = false;
@@ -1343,7 +1303,7 @@ public class RangeTestNew{
 	public void testIsNaNRangeNoneTwice() {
 		
 		//setup
-		Range testRange =new Range(1.0, 2.0);
+		Range testRange =new Range(1, 1);
 		//verify
 		boolean result = testRange.isNaNRange();
 		result = testRange.isNaNRange();
@@ -1353,689 +1313,299 @@ public class RangeTestNew{
 		assertEquals(expected, result);
 	}
 	
-	
-	
-	//Sample tests
+	//Professor's Sample Test Code from org.jfree.data.test
 	
 	/**
      * Confirm that the constructor initializes all the required fields.
      */
-//    @Test
-//    public void testConstructor() {
-//        Range r1 = new Range(0.1, 1000.0);
-//        assertEquals(r1.getLowerBound(), 0.1, 0.0d);
-//        assertEquals(r1.getUpperBound(), 1000.0, 0.0d);
-//
-//        try {
-//            /*Range r2 =*/ new Range(10.0, 0.0);
-//            fail("Lower bound cannot be greater than the upper");
-//        }
-//        catch (Exception e) {
-//            // expected
-//        }
-//    }
-    
     @Test
-    public void testConstructorLB() {
-        Range test1 = new Range(0.1, 1000.0);
-        assertEquals(test1.getLowerBound(), 0.1, 0.0d);
-    }
-    
-    @Test
-    public void testConstructorUB() {
-        Range test1 = new Range(0.1, 1000.0);
-        assertEquals(test1.getUpperBound(), 1000.0, 0.0d);
-    }
+    public void testConstructor() {
+        Range r1 = new Range(0.1, 1000.0);
+        assertEquals(r1.getLowerBound(), 0.1, 0.0d);
+        assertEquals(r1.getUpperBound(), 1000.0, 0.0d);
 
-    
+        try {
+            /*Range r2 =*/ new Range(10.0, 0.0);
+            fail("Lower bound cannot be greater than the upper");
+        }
+        catch (Exception e) {
+            // expected
+        }
+    }
     
     /**
      * Confirm that the equals method can distinguish all the required fields.
      */
-//    @Test
-//    public void testEquals() {
-//        Range r1 = new Range(0.0, 1.0);
-//        Range r2 = new Range(0.0, 1.0);
-//        assertEquals(r1, r2);
-//        assertEquals(r2, r1);
-//
-//        r1 = new Range(0.0, 1.0);
-//        r2 = new Range(0.5, 1.0);
-//        assertFalse(r1.equals(r2));
-//
-//        r1 = new Range(0.0, 1.0);
-//        r2 = new Range(0.0, 2.0);
-//        assertFalse(r1.equals(r2));
-//
-//        // a Range object cannot be equal to a different object type
-//        assertFalse(r1.equals(new Double(0.0)));
-//    }
-    
     @Test
-    public void testEqualsSame() {
-    	//setup
-    	 Range test1 = new Range(0.0, 1.0);
-         Range test2 = new Range(0.0, 1.0);
-         //verify
-         assertEquals(test1, test2);
-    }
-    
-    @Test
-    public void testEqualsSameFlipped() {
-    	//setup
-    	 Range test1 = new Range(0.0, 1.0);
-         Range test2 = new Range(0.0, 1.0);
-         //verify
-         assertEquals(test2, test1);
-    }
-    
-    @Test
-    public void testEqualsDiffLB() {
-    	//setup
-    	 Range test1 = new Range(0.0, 1.0);
-         Range test2 = new Range(0.5, 1.0);
-         //verify
-         assertFalse(test1.equals(test2));
-    }
-    
-    @Test
-    public void testEqualsDiffUB() {
-    	//setup
-    	 Range test1 = new Range(0.0, 1.0);
-         Range test2 = new Range(0.0, 2.0);
-         //verify
-         assertFalse(test1.equals(test2));
-    }
-    
-    @Test
-    public void testEqualsDiff() {
-    	//setup
-    	 Range test1 = new Range(0.0, 1.0);
-         //verify
-    	 assertFalse(test1.equals(new Double(0.0)));
+    public void testEquals() {
+        Range r1 = new Range(0.0, 1.0);
+        Range r2 = new Range(0.0, 1.0);
+        assertEquals(r1, r2);
+        assertEquals(r2, r1);
+
+        r1 = new Range(0.0, 1.0);
+        r2 = new Range(0.5, 1.0);
+        assertFalse(r1.equals(r2));
+
+        r1 = new Range(0.0, 1.0);
+        r2 = new Range(0.0, 2.0);
+        assertFalse(r1.equals(r2));
+
+        // a Range object cannot be equal to a different object type
+        assertFalse(r1.equals(new Double(0.0)));
     }
 
     /**
      * Two objects that are equal are required to return the same hashCode.
      */
-//    @Test
-//    public void testHashCodeSample() {
-//        Range a1 = new Range(1.0, 100.0);
-//        Range a2 = new Range(1.0, 100.0);
-//        assertEquals(a1.hashCode(), a2.hashCode());
-//
-//        a1 = new Range(-100.0, 2.0);
-//        a2 = new Range(-100.0, 2.0);
-//        assertEquals(a1.hashCode(), a2.hashCode());
-//    }
-    
     @Test
-    public void testHashCodeValid() {
-    	//setup
-        Range test1 = new Range(1.0, 100.0);
-        Range test2 = new Range(1.0, 100.0);
-        //verify
-        assertEquals(test1.hashCode(), test2.hashCode());
+    public void testHashCodeSample() {
+        Range a1 = new Range(1.0, 100.0);
+        Range a2 = new Range(1.0, 100.0);
+        assertEquals(a1.hashCode(), a2.hashCode());
+
+        a1 = new Range(-100.0, 2.0);
+        a2 = new Range(-100.0, 2.0);
+        assertEquals(a1.hashCode(), a2.hashCode());
     }
-    
-    @Test
-    public void testHashCodeValidFlipped() {
-    	//setup
-        Range test1 = new Range(-100.0, 2.0);
-        Range test2 = new Range(-100.0, 2.0);
-        //verify
-        assertEquals(test1.hashCode(), test2.hashCode());
-    }
-    
-    
+ 
 
     /**
      * Simple tests for the contains() method.
      */
 //    @Test
-//    public void testContains() {
-//        Range r1 = new Range(0.0, 1.0);
-//        assertFalse(r1.contains(Double.NaN));
-//        assertFalse(r1.contains(Double.NEGATIVE_INFINITY));
-//        assertFalse(r1.contains(-1.0));
-//        assertTrue(r1.contains(0.0));
-//        assertTrue(r1.contains(0.5));
-//        assertTrue(r1.contains(1.0));
-//        assertFalse(r1.contains(2.0));
-//        assertFalse(r1.contains(Double.POSITIVE_INFINITY));
-//    }
-    
-    @Test
-    public void testContainsNaN() {
-        Range test1 = new Range(0.0, 1.0);
-        assertFalse(test1.contains(Double.NaN));
-    }
-    
-    @Test
-    public void testContainsNegativeInfinity() {
-        Range test1 = new Range(0.0, 1.0);
-        assertFalse(test1.contains(Double.NEGATIVE_INFINITY));
-    }
-    
-    @Test
-    public void testContainsNegative() {
-        Range test1 = new Range(0.0, 1.0);
-        assertFalse(test1.contains(-3.0));
-    }
-    
-    @Test
-    public void testContainsLB() {
-        Range test1 = new Range(0.0, 1.0);
-        assertTrue(test1.contains(0.0));
-    }
-    
-    @Test
-    public void testContainsALB() {
-        Range test1 = new Range(0.0, 1.0);
-        assertTrue(test1.contains(0.7));
-    }
-    
-    @Test
-    public void testContainsUB() {
-        Range test1 = new Range(0.0, 1.0);
-        assertTrue(test1.contains(1.0));
-    }
-    
-    @Test
-    public void testContainsAUB() {
-        Range test1 = new Range(0.0, 1.0);
-        assertFalse(test1.contains(3.0));
-    }
-    
-    @Test
-    public void testContainsPositiveInfinity() {
-        Range test1 = new Range(0.0, 1.0);
-        assertFalse(test1.contains(Double.POSITIVE_INFINITY));
+    public void testContains() {
+        Range r1 = new Range(0.0, 1.0);
+        assertFalse(r1.contains(Double.NaN));
+        assertFalse(r1.contains(Double.NEGATIVE_INFINITY));
+        assertFalse(r1.contains(-1.0));
+        assertTrue(r1.contains(0.0));
+        assertTrue(r1.contains(0.5));
+        assertTrue(r1.contains(1.0));
+        assertFalse(r1.contains(2.0));
+        assertFalse(r1.contains(Double.POSITIVE_INFINITY));
     }
     
 
     /**
      * Tests the constrain() method for various values.
      */
-//    @Test
-//    public void testConstrain() {
-//        Range r1 = new Range(0.0, 1.0);
-
-//        double d = r1.constrain(0.5);
-//        assertEquals(0.5, d, 0.0000001);
-
-//        d = r1.constrain(0.0);
-//        assertEquals(0.0, d, 0.0000001);
-
-//        d = r1.constrain(1.0);
-//        assertEquals(1.0, d, 0.0000001);
-
-//        d = r1.constrain(-1.0);
-//        assertEquals(0.0, d, 0.0000001);
-
-//        d = r1.constrain(2.0);
-//        assertEquals(1.0, d, 0.0000001);
-
-//        d = r1.constrain(Double.POSITIVE_INFINITY);
-//        assertEquals(1.0, d, 0.0000001);
-//
-//        d = r1.constrain(Double.NEGATIVE_INFINITY);
-//        assertEquals(0.0, d, 0.0000001);
-//
-//        d = r1.constrain(Double.NaN);
-//        assertTrue(Double.isNaN(d));
-//    }
-    
     @Test
-    public void testConstrainBLB() {
-        Range test1 = new Range(0.0, 1.0);
-        double d = test1.constrain(-1.0);
-        
-        assertEquals(0.0, d, 0.0000001);
-    }
-    
-    @Test
-    public void testConstrainALB() {
-        Range test1 = new Range(0.0, 1.0);
-        double d = test1.constrain(0.5);
-        
+    public void testConstrain() {
+        Range r1 = new Range(0.0, 1.0);
+
+        double d = r1.constrain(0.5);
         assertEquals(0.5, d, 0.0000001);
-    }
-    
-    @Test
-    public void testConstrainLB() {
-        Range test1 = new Range(0.0, 1.0);
-        double d = test1.constrain(0.0);
-        
+
+        d = r1.constrain(0.0);
         assertEquals(0.0, d, 0.0000001);
-    }
-    
-    @Test
-    public void testConstrainUB() {
-        Range test1 = new Range(0.0, 1.0);
-        double d = test1.constrain(1.0);
-        
+
+        d = r1.constrain(1.0);
         assertEquals(1.0, d, 0.0000001);
-    }
-    
-    @Test
-    public void testConstrainAUB() {
-        Range test1 = new Range(0.0, 1.0);
-        double d = test1.constrain(2.0);
-        
-        assertEquals(1.0, d, 0.0000001);
-    }
-    
-    @Test
-    public void testConstrainNeg() {
-        Range test1 = new Range(0.0, 1.0);
-        double d = test1.constrain(Double.NEGATIVE_INFINITY);
-        
+
+        d = r1.constrain(-1.0);
         assertEquals(0.0, d, 0.0000001);
-    }
-    
-    @Test
-    public void testConstrainNaN() {
-        Range test1 = new Range(0.0, 1.0);
-        double d = test1.constrain(Double.NaN);
-        
+
+        d = r1.constrain(2.0);
+        assertEquals(1.0, d, 0.0000001);
+
+        d = r1.constrain(Double.POSITIVE_INFINITY);
+        assertEquals(1.0, d, 0.0000001);
+
+        d = r1.constrain(Double.NEGATIVE_INFINITY);
+        assertEquals(0.0, d, 0.0000001);
+
+        d = r1.constrain(Double.NaN);
         assertTrue(Double.isNaN(d));
-    }
-    
-    
-    @Test
-    public void testConstrainPos() {
-        Range test1 = new Range(0.0, 1.0);
-        double d = test1.constrain(Double.POSITIVE_INFINITY);
-        
-        assertEquals(1.0, d, 0.0000001);
     }
     
 
     /**
      * Simple tests for the intersects() method.
      */
-//    @Test
-//    public void testIntersects() {
-//        Range test1 = new Range(0.0, 1.0);
-//        assertFalse(test1.intersects(-2.0, -1.0));
-//        assertFalse(test1.intersects(-2.0, 0.0));
-//        assertTrue(test1.intersects(-2.0, 0.5));
-//        assertTrue(test1.intersects(-2.0, 1.0));
-//        assertTrue(test1.intersects(-2.0, 1.5));
-//        assertTrue(test1.intersects(0.0, 0.5));
-//        assertTrue(test1.intersects(0.0, 1.0));
-//        assertTrue(test1.intersects(0.0, 1.5));
-//        assertTrue(test1.intersects(0.5, 0.6));
-//        assertTrue(test1.intersects(0.5, 1.0));
-//        assertTrue(test1.intersects(0.5, 1.5));
-//        assertFalse(test1.intersects(1.0, 1.1));
-//        assertFalse(test1.intersects(1.5, 2.0));
-//    }
-    
     @Test
-    public void testIntersects1() {
+    public void testIntersects() {
         Range test1 = new Range(0.0, 1.0);
         assertFalse(test1.intersects(-2.0, -1.0));
-    }
-    
-    @Test
-    public void testIntersects2() {
-        Range test1 = new Range(0.0, 1.0);
         assertFalse(test1.intersects(-2.0, 0.0));
-    }
-    
-    @Test
-    public void testIntersects3() {
-        Range test1 = new Range(0.0, 1.0);
         assertTrue(test1.intersects(-2.0, 0.5));
-    }
-    
-    @Test
-    public void testIntersects4() {
-        Range test1 = new Range(0.0, 1.0);
         assertTrue(test1.intersects(-2.0, 1.0));
-    }
-    
-    @Test
-    public void testIntersects5() {
-        Range test1 = new Range(0.0, 1.0);
         assertTrue(test1.intersects(-2.0, 1.5));
-    }
-    
-    @Test
-    public void testIntersects6() {
-        Range test1 = new Range(0.0, 1.0);
         assertTrue(test1.intersects(0.0, 0.5));
-    }
-    
-    @Test
-    public void testIntersects7() {
-        Range test1 = new Range(0.0, 1.0);
         assertTrue(test1.intersects(0.0, 1.0));
-    }
-    
-    @Test
-    public void testIntersects8() {
-        Range test1 = new Range(0.0, 1.0);
         assertTrue(test1.intersects(0.0, 1.5));
-    }
-    
-    @Test
-    public void testIntersects9() {
-        Range test1 = new Range(0.0, 1.0);
         assertTrue(test1.intersects(0.5, 0.6));
-    }
-    
-    @Test
-    public void testIntersects10() {
-        Range test1 = new Range(0.0, 1.0);
         assertTrue(test1.intersects(0.5, 1.0));
-    }
-    
-    @Test
-    public void testIntersects11() {
-        Range test1 = new Range(0.0, 1.0);
         assertTrue(test1.intersects(0.5, 1.5));
-    }
-    
-    @Test
-    public void testIntersects12() {
-        Range test1 = new Range(0.0, 1.0);
         assertFalse(test1.intersects(1.0, 1.1));
-    }
-    
-    @Test
-    public void testIntersects13() {
-        Range test1 = new Range(0.0, 1.0);
         assertFalse(test1.intersects(1.5, 2.0));
     }
-    
 
     /**
      * A simple test for the expand() method.
      */
-//    @Test
-//    public void testExpandSample() {
-//        Range r1 = new Range(0.0, 100.0);
-//        Range r2 = Range.expand(r1, 0.10, 0.10);
-//        assertEquals(-10.0, r2.getLowerBound(), 0.001);
-//        assertEquals(110.0, r2.getUpperBound(), 0.001);
-//
-//        // Expand by 0% does not change the range
-//        r2 = Range.expand(r1, 0.0, 0.0);
-//        assertEquals(r1, r2);
-//
-//        try {
-//            Range.expand(null, 0.1, 0.1);
-//            fail("Null value is accepted");
-//        }
-//        catch (Exception e) {
-//        }
-//
-//        // Lower > upper: mid point is used
-//        r2 = Range.expand(r1, -0.8, -0.5);
-//        assertEquals(65.0, r2.getLowerBound(), 0.001);
-//        assertEquals(65.0, r2.getUpperBound(), 0.001);
-//    }
+    @Test
+    public void testExpandSample() {
+        Range r1 = new Range(0.0, 100.0);
+        Range r2 = Range.expand(r1, 0.10, 0.10);
+        assertEquals(-10.0, r2.getLowerBound(), 0.001);
+        assertEquals(110.0, r2.getUpperBound(), 0.001);
+
+        // Expand by 0% does not change the range
+        r2 = Range.expand(r1, 0.0, 0.0);
+        assertEquals(r1, r2);
+
+        try {
+            Range.expand(null, 0.1, 0.1);
+            fail("Null value is accepted");
+        }
+        catch (Exception e) {
+        }
+
+        // Lower > upper: mid point is used
+        r2 = Range.expand(r1, -0.8, -0.5);
+        assertEquals(65.0, r2.getLowerBound(), 0.001);
+        assertEquals(65.0, r2.getUpperBound(), 0.001);
+    }
     
 
     /**
      * A simple test for the scale() method.
      */
-//    @Test
-//    public void testShift() {
-//        Range r1 = new Range(10.0, 20.0);
-//        Range r2 = Range.shift(r1, 20.0);
-//        assertEquals(30.0, r2.getLowerBound(), 0.001);
-//        assertEquals(40.0, r2.getUpperBound(), 0.001);
-//
-//        r1 = new Range(0.0, 100.0);
-//        r2 = Range.shift(r1, -50.0, true);
-//        assertEquals(-50.0, r2.getLowerBound(), 0.001);
-//        assertEquals(50.0, r2.getUpperBound(), 0.001);
-//
-//        r1 = new Range(-10.0, 20.0);
-//        r2 = Range.shift(r1, 20.0, true);
-//        assertEquals(10.0, r2.getLowerBound(), 0.001);
-//        assertEquals(40.0, r2.getUpperBound(), 0.001);
-//
-//        r1 = new Range(-10.0, 20.0);
-//        r2 = Range.shift(r1, -30.0, true);
-//        assertEquals(-40.0, r2.getLowerBound(), 0.001);
-//        assertEquals(-10.0, r2.getUpperBound(), 0.001);
-//
-//        r1 = new Range(-10.0, 20.0);
-//        r2 = Range.shift(r1, 20.0, false);
-//        assertEquals(0.0, r2.getLowerBound(), 0.001);
-//        assertEquals(40.0, r2.getUpperBound(), 0.001);
-//
-//        r1 = new Range(-10.0, 20.0);
-//        r2 = Range.shift(r1, -30.0, false);
-//        assertEquals(-40.0, r2.getLowerBound(), 0.001);
-//        assertEquals(0.0, r2.getUpperBound(), 0.001);
-//
-//        // Shifting with a delta of 0 does not change the range
-//        r2 = Range.shift(r1, 0.0);
-//        assertEquals(r1, r2);
-//
-//        try {
-//            Range.shift(null, 0.1);
-//            fail("Null value is accepted");
-//        }
-//        catch (Exception e) {
-//        }
-//    }
+    @Test
+    public void testShift() {
+        Range r1 = new Range(10.0, 20.0);
+        Range r2 = Range.shift(r1, 20.0);
+        assertEquals(30.0, r2.getLowerBound(), 0.001);
+        assertEquals(40.0, r2.getUpperBound(), 0.001);
+
+        r1 = new Range(0.0, 100.0);
+        r2 = Range.shift(r1, -50.0, true);
+        assertEquals(-50.0, r2.getLowerBound(), 0.001);
+        assertEquals(50.0, r2.getUpperBound(), 0.001);
+
+        r1 = new Range(-10.0, 20.0);
+        r2 = Range.shift(r1, 20.0, true);
+        assertEquals(10.0, r2.getLowerBound(), 0.001);
+        assertEquals(40.0, r2.getUpperBound(), 0.001);
+
+        r1 = new Range(-10.0, 20.0);
+        r2 = Range.shift(r1, -30.0, true);
+        assertEquals(-40.0, r2.getLowerBound(), 0.001);
+        assertEquals(-10.0, r2.getUpperBound(), 0.001);
+
+        r1 = new Range(-10.0, 20.0);
+        r2 = Range.shift(r1, 20.0, false);
+        assertEquals(0.0, r2.getLowerBound(), 0.001);
+        assertEquals(40.0, r2.getUpperBound(), 0.001);
+
+        r1 = new Range(-10.0, 20.0);
+        r2 = Range.shift(r1, -30.0, false);
+        assertEquals(-40.0, r2.getLowerBound(), 0.001);
+        assertEquals(0.0, r2.getUpperBound(), 0.001);
+
+        // Shifting with a delta of 0 does not change the range
+        r2 = Range.shift(r1, 0.0);
+        assertEquals(r1, r2);
+
+        try {
+            Range.shift(null, 0.1);
+            fail("Null value is accepted");
+        }
+        catch (Exception e) {
+        }
+    }
 
     /**
      * A simple test for the scale() method.
      */
-//    @Test
-//    public void testScale() {
-//        Range r1 = new Range(0.0, 100.0);
-//        Range r2 = Range.scale(r1, 0.10);
-//        assertEquals(0.0, r2.getLowerBound(), 0.001);
-//        assertEquals(10.0, r2.getUpperBound(), 0.001);
-//
-//        r1 = new Range(-10.0, 100.0);
-//        r2 = Range.scale(r1, 2.0);
-//        assertEquals(-20.0, r2.getLowerBound(), 0.001);
-//        assertEquals(200.0, r2.getUpperBound(), 0.001);
-//
-//        // Scaling with a factor of 1 does not change the range
-//        r2 = Range.scale(r1, 1.0);
-//        assertEquals(r1, r2);
-//
-//        try {
-//            Range.scale(null, 0.1);
-//            fail("Null value is accepted");
-//        }
-//        catch (Exception e) {
-//        }
-//
-//        try {
-//            Range.scale(r1, -0.5);
-//            fail("Negative factor accepted");
-//        }
-//        catch (Exception e) {
-//        }
-//    }
+    @Test
+    public void testScale() {
+        Range r1 = new Range(0.0, 100.0);
+        Range r2 = Range.scale(r1, 0.10);
+        assertEquals(0.0, r2.getLowerBound(), 0.001);
+        assertEquals(10.0, r2.getUpperBound(), 0.001);
+
+        r1 = new Range(-10.0, 100.0);
+        r2 = Range.scale(r1, 2.0);
+        assertEquals(-20.0, r2.getLowerBound(), 0.001);
+        assertEquals(200.0, r2.getUpperBound(), 0.001);
+
+        // Scaling with a factor of 1 does not change the range
+        r2 = Range.scale(r1, 1.0);
+        assertEquals(r1, r2);
+
+        try {
+            Range.scale(null, 0.1);
+            fail("Null value is accepted");
+        }
+        catch (Exception e) {
+        }
+
+        try {
+            Range.scale(r1, -0.5);
+            fail("Negative factor accepted");
+        }
+        catch (Exception e) {
+        }
+    }
 
     private static final double EPSILON = 0.0000000001;
 
     /**
      * Some checks for the combine method.
      */
-//    @Test
-//    public void testCombine() {
-//        Range r1 = new Range(1.0, 2.0);
-//        Range r2 = new Range(1.5, 2.5);
-//
-//        assertNull(Range.combine(null, null));
-//        assertEquals(r1, Range.combine(r1, null));
-//        assertEquals(r2, Range.combine(null, r2));
-//        assertEquals(new Range(1.0, 2.5), Range.combine(r1, r2));
-//
-//        Range r3 = new Range(Double.NaN, 1.3);
-//        Range rr = Range.combine(r1, r3);
-//        assertTrue(Double.isNaN(rr.getLowerBound()));
-//        assertEquals(2.0, rr.getUpperBound(), EPSILON);
-//
-//        Range r4 = new Range(1.7, Double.NaN);
-//        rr = Range.combine(r4, r1);
-//        assertEquals(1.0, rr.getLowerBound(), EPSILON);
-//        assertTrue(Double.isNaN(rr.getUpperBound()));
-//    }
-    
     @Test
-    public void testCombineNULL() {
+    public void testCombine() {
+        Range r1 = new Range(1.0, 2.0);
+        Range r2 = new Range(1.5, 2.5);
+
         assertNull(Range.combine(null, null));
-    }
-    
-    @Test
-    public void testCombineLB_NULL() {
-        Range test1 = new Range(1.0, 2.0);
-        
-        assertEquals(test1, Range.combine(test1, null));
-    }
-    
-    @Test
-    public void testCombineUB_NULL() {
-        Range test1 = new Range(1.0, 2.0);
-        
-        assertEquals(test1, Range.combine(null, test1));
-    }
-    
-    @Test
-    public void testCombineBoth() {
-        Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(1.5, 2.5);
-        
-        assertEquals(new Range(1.0, 2.5), Range.combine(test1, test2));
-    }
-    
-    @Test
-    public void testCombineLBLB() {
-    	Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(Double.NaN, 1.3);
-        Range test3 = Range.combine(test1, test2);
-        
-        assertTrue(Double.isNaN(test3.getLowerBound()));
-    }
-    
-    @Test
-    public void testCombineLBUB() {
-    	Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(Double.NaN, 1.3);
-        Range test3 = Range.combine(test1, test2);
-        
-        assertEquals(2.0, test3.getUpperBound(), EPSILON);
-    }
-    
-    @Test
-    public void testCombineUBLB() {
-    	Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(1.7, Double.NaN);
-        Range test3 = Range.combine(test1, test2);
-        
-        assertEquals(1.0, test3.getLowerBound(), EPSILON);
-    }
-    
-    @Test
-    public void testCombineUBUB() {
-    	Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(1.7, Double.NaN);
-        Range test3 = Range.combine(test1, test2);
-        
-        assertTrue(Double.isNaN(test3.getUpperBound()));
+        assertEquals(r1, Range.combine(r1, null));
+        assertEquals(r2, Range.combine(null, r2));
+        assertEquals(new Range(1.0, 2.5), Range.combine(r1, r2));
+
+        Range r3 = new Range(Double.NaN, 1.3);
+        Range rr = Range.combine(r1, r3);
+        assertTrue(Double.isNaN(rr.getLowerBound()));
+        assertEquals(2.0, rr.getUpperBound(), EPSILON);
+
+        Range r4 = new Range(1.7, Double.NaN);
+        rr = Range.combine(r4, r1);
+        assertEquals(1.0, rr.getLowerBound(), EPSILON);
+        assertTrue(Double.isNaN(rr.getUpperBound()));
     }
 
     /**
      * Some checks for the combineIgnoringNaN() method.
      */
-//    @Test
-//    public void testCombineIgnoringNaN() {
-//        Range r1 = new Range(1.0, 2.0);
-//        Range r2 = new Range(1.5, 2.5);
-
-//        assertNull(Range.combineIgnoringNaN(null, null));
-//        assertEquals(r1, Range.combineIgnoringNaN(r1, null));
-//        assertEquals(r2, Range.combineIgnoringNaN(null, r2));
-//        assertEquals(new Range(1.0, 2.5), Range.combineIgnoringNaN(r1, r2));
-
-//        Range r3 = new Range(Double.NaN, 1.3);
-//        Range rr = Range.combineIgnoringNaN(r1, r3);
-//        assertEquals(1.0, rr.getLowerBound(), EPSILON);
-//        assertEquals(2.0, rr.getUpperBound(), EPSILON);
-//
-//        Range r4 = new Range(1.7, Double.NaN);
-//        rr = Range.combineIgnoringNaN(r4, r1);
-//        assertEquals(1.0, rr.getLowerBound(), EPSILON);
-//        assertEquals(2.0, rr.getUpperBound(), EPSILON);
-//    }
-    
     @Test
-    public void testCombineIgnoringNaNNULL() {
+    public void testCombineIgnoringNaN() {
+        Range r1 = new Range(1.0, 2.0);
+        Range r2 = new Range(1.5, 2.5);
+
         assertNull(Range.combineIgnoringNaN(null, null));
+        assertEquals(r1, Range.combineIgnoringNaN(r1, null));
+        assertEquals(r2, Range.combineIgnoringNaN(null, r2));
+        assertEquals(new Range(1.0, 2.5), Range.combineIgnoringNaN(r1, r2));
+
+        Range r3 = new Range(Double.NaN, 1.3);
+        Range rr = Range.combineIgnoringNaN(r1, r3);
+        assertEquals(1.0, rr.getLowerBound(), EPSILON);
+        assertEquals(2.0, rr.getUpperBound(), EPSILON);
+
+        Range r4 = new Range(1.7, Double.NaN);
+        rr = Range.combineIgnoringNaN(r4, r1);
+        assertEquals(1.0, rr.getLowerBound(), EPSILON);
+        assertEquals(2.0, rr.getUpperBound(), EPSILON);
     }
     
     @Test
-    public void testCombineIgnoringNaN_LB_NULL() {
-        Range test1 = new Range(1.0, 2.0);
-        
-        assertEquals(test1, Range.combineIgnoringNaN(test1, null));
+    public void testIsNaNRangeDouble() {
+        assertTrue(new Range(Double.NaN, Double.NaN).isNaNRange());
+        assertFalse(new Range(1.0, 2.0).isNaNRange());
+        assertFalse(new Range(Double.NaN, 2.0).isNaNRange());
+        assertFalse(new Range(1.0, Double.NaN).isNaNRange());
     }
-    
-    @Test
-    public void testCombineIgnoringNaN_UB_NULL() {
-        Range test1 = new Range(1.0, 2.0);
-        
-        assertEquals(test1, Range.combineIgnoringNaN(null, test1));
-    }
-    
-    @Test
-    public void testCombineIgnoringNaNBoth() {
-        Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(1.5, 2.5);
-        
-        assertEquals(new Range(1.0, 2.5), Range.combineIgnoringNaN(test1, test2));
-    }
-    
-    @Test
-    public void testCombineIgnoringNaN_LBLB() {
-    	Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(Double.NaN, 1.3);
-        Range test3 = Range.combineIgnoringNaN(test1, test2);
-        
-        assertEquals(1.0, test3.getLowerBound(), EPSILON);
-    }
-    
-    @Test
-    public void testCombineIgnoringNaN_LBUB() {
-    	Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(Double.NaN, 1.3);
-        Range test3 = Range.combineIgnoringNaN(test1, test2);
-        
-        assertEquals(2.0, test3.getUpperBound(), EPSILON);
-    }
-    
-    @Test
-    public void testCombineIgnoringNaN_UBLB() {
-    	Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(1.7, Double.NaN);
-        Range test3 = Range.combineIgnoringNaN(test1, test2);
-        
-        assertEquals(1.0, test3.getLowerBound(), EPSILON);
-    }
-    
-    @Test
-    public void testCombineIgnoringNaN_UBUB() {
-    	Range test1 = new Range(1.0, 2.0);
-        Range test2 = new Range(1.7, Double.NaN);
-        Range test3 = Range.combineIgnoringNaN(test1, test2);
-        
-        assertEquals(2.0, test3.getUpperBound(), EPSILON);
-    }
-    
 	
 }
