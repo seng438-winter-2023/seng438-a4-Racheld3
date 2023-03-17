@@ -1610,6 +1610,141 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "70d51e76-0d31-4815-a27a-8bc31abad8b1",
+    "name": "Search for valid item",
+    "commands": [{
+      "id": "88982f36-77a5-410a-a70a-27c4148d4ba5",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78ad7f46-d184-4279-a3c4-9a845a8c573e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x814",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef565420-8491-4425-bfdc-642b2795c2c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=ikea-search-input",
+      "targets": [
+        ["id=ikea-search-input", "id"],
+        ["name=q", "name"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d37b9ffa-2eff-481c-9c93-c29f806173fa",
+      "comment": "",
+      "command": "type",
+      "target": "id=ikea-search-input",
+      "targets": [
+        ["id=ikea-search-input", "id"],
+        ["name=q", "name"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Coffee Table"
+    }, {
+      "id": "baf08ef3-fee2-48ab-83d0-9b4e9a9f9b1d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=ikea-search-input",
+      "targets": [
+        ["id=ikea-search-input", "id"],
+        ["name=q", "name"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "e41c4983-ee30-41e7-ae3d-d7254a988e15",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "824c5a5b-2074-4f0e-9d4d-1642559d280a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,32)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b816b082-7905-4deb-87c6-b6ac40dea690",
+    "name": "Search for invalid/non-existent item",
+    "commands": [{
+      "id": "24cee4e9-844c-4ef2-b2c9-ba7de1d2c5cb",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ikea.com/ca/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d7d6a11-445c-463e-8728-c79ce2f26bf2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x772",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e73e8f4-345b-4005-aee7-aceff83c77b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=ikea-search-input",
+      "targets": [
+        ["id=ikea-search-input", "id"],
+        ["name=q", "name"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fe7d91c-2b37-44e6-8069-f8c75b8e9a19",
+      "comment": "",
+      "command": "type",
+      "target": "id=ikea-search-input",
+      "targets": [
+        ["id=ikea-search-input", "id"],
+        ["name=q", "name"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "chainsaw"
+    }, {
+      "id": "3103af3f-ab61-4ac3-baf8-83e0b75f01cd",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=ikea-search-input",
+      "targets": [
+        ["id=ikea-search-input", "id"],
+        ["name=q", "name"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "beb69661-0b92-4294-b880-8964e76e7ad2",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,131)",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "064ab0e7-8bd0-4016-aa0c-d3e1ec806813",
