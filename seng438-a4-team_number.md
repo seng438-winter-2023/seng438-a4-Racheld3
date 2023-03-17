@@ -68,13 +68,10 @@ Updated Mutation Coverage = 93% (with improved tests written)
 <img width="993" alt="Screenshot 2023-03-17 at 9 54 49 AM" src="https://user-images.githubusercontent.com/76859857/225955523-c6a7b433-48a8-4fd3-962c-4b840c9180a0.png">
 
 
-
-
 Test Suite Class: Range
+----------------------------
+Updated Mutation Coverage = 80% (with improved tests written)
 ![image](https://user-images.githubusercontent.com/47041999/225964323-b000cab2-b826-4332-a792-47178b67476c.png)
-
-
-
 
 
 # Analysis drawn on the effectiveness of each of the test classes
