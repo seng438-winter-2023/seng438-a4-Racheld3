@@ -107,6 +107,8 @@ ADD MORE HERE
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 Selenium had a very straight forward installation process as it is a simple plugin on Firefox or Chrome. It is quite user friendly and easy to navigate and use, and it can very efficiently record all activity on the web pages being tested, including mouse clicking and scrolling. However, several of our team mates had a few issues when using this tool. For example, Selenium crashed for one of our team mates every time they attempted to record more than 5 different steps of a test's functionality. For another team mate, Selenium proved to be quite laggy once a recording was stopped. Our team also found it tricky to investigate what went wrong when tests failed, or find the root cause of issues. Overall, it was quick to learn and worked quite well for the tasks in this assignment.
 
+On the other hand, Sikulix does not have a recording function, meaning all tests have to be entered manually. This can be very time consuming compared to creating tests in Selenium.
+
 # How the team work/effort was divided and managed
 For the mutation testing portion of the lab, we were required to improve the mutation test score by 10% for the Range and DataUtilities classes. Each person was responsible for improving the score for one class by 5%. For the GUI testing portion, each person was responsible for creating 2 tests with Selenium. We split up the work for the report evenly among us. As issues arose, we collaborated to solve them, communicating through text, in person meetings, and video calls. 
 
