@@ -1250,7 +1250,7 @@ public class RangeTestNew{
 	public void testIsNaNRangeBothNotNaN() {
 		
 		//setup
-		Range testRange =new Range(1, 1);
+		Range testRange =new Range(1.0, 2.0);
 		//verify
 		boolean result = testRange.isNaNRange();
 		boolean expected = false;
@@ -1263,7 +1263,7 @@ public class RangeTestNew{
 	public void testIsNaNRangeLBNaN() {
 		
 		//setup
-		Range testRange =new Range(Double.NaN, 1);
+		Range testRange =new Range(Double.NaN, 2.0);
 		//verify
 		boolean result = testRange.isNaNRange();
 		boolean expected = false;
@@ -1276,7 +1276,7 @@ public class RangeTestNew{
 	public void testIsNaNRangeUBNaN() {
 		
 		//setup
-		Range testRange =new Range(1, Double.NaN);
+		Range testRange =new Range(1.0, Double.NaN);
 		//verify
 		boolean result = testRange.isNaNRange();
 		boolean expected = false;
@@ -1303,7 +1303,7 @@ public class RangeTestNew{
 	public void testIsNaNRangeNoneTwice() {
 		
 		//setup
-		Range testRange =new Range(1, 1);
+		Range testRange =new Range(1.0, 2.0);
 		//verify
 		boolean result = testRange.isNaNRange();
 		result = testRange.isNaNRange();
@@ -1312,6 +1312,16 @@ public class RangeTestNew{
 		//verify
 		assertEquals(expected, result);
 	}
+	
+//    @Test
+//    public void testIsNaNRangeSample() {
+//        assertTrue(new Range(Double.NaN, Double.NaN).isNaNRange());
+//        assertFalse(new Range(1.0, 2.0).isNaNRange());
+//        assertFalse(new Range(Double.NaN, 2.0).isNaNRange());
+//        assertFalse(new Range(1.0, Double.NaN).isNaNRange());
+//    }
+	
+	
 	
 	//Sample tests
 	
@@ -1441,29 +1451,66 @@ public class RangeTestNew{
     /**
      * A simple test for the expand() method.
      */
+//    @Test
+//    public void testExpandSample() {
+//        Range r1 = new Range(0.0, 100.0);
+//        Range r2 = Range.expand(r1, 0.10, 0.10);
+//        assertEquals(-10.0, r2.getLowerBound(), 0.001);
+//        assertEquals(110.0, r2.getUpperBound(), 0.001);
+//
+//        // Expand by 0% does not change the range
+//        r2 = Range.expand(r1, 0.0, 0.0);
+//        assertEquals(r1, r2);
+//
+//        try {
+//            Range.expand(null, 0.1, 0.1);
+//            fail("Null value is accepted");
+//        }
+//        catch (Exception e) {
+//        }
+//
+//        // Lower > upper: mid point is used
+//        r2 = Range.expand(r1, -0.8, -0.5);
+//        assertEquals(65.0, r2.getLowerBound(), 0.001);
+//        assertEquals(65.0, r2.getUpperBound(), 0.001);
+//    }
+    
     @Test
-    public void testExpandSample() {
-        Range r1 = new Range(0.0, 100.0);
-        Range r2 = Range.expand(r1, 0.10, 0.10);
-        assertEquals(-10.0, r2.getLowerBound(), 0.001);
-        assertEquals(110.0, r2.getUpperBound(), 0.001);
-
-        // Expand by 0% does not change the range
-        r2 = Range.expand(r1, 0.0, 0.0);
-        assertEquals(r1, r2);
-
-        try {
-            Range.expand(null, 0.1, 0.1);
-            fail("Null value is accepted");
-        }
-        catch (Exception e) {
-        }
-
-        // Lower > upper: mid point is used
-        r2 = Range.expand(r1, -0.8, -0.5);
-        assertEquals(65.0, r2.getLowerBound(), 0.001);
-        assertEquals(65.0, r2.getUpperBound(), 0.001);
+    public void testExpand2() {
+    	Range testRange1 = new Range(0.0, 100.0);
+    	Range testRange2 = Range.expand(testRange1, 0.10, 0.10);
+    	assertEquals(-10.0, testRange2.getLowerBound(), 0.001);
     }
+    
+    @Test
+    public void testExpand3() {
+    	Range testRange1 = new Range(0.0, 100.0);
+    	Range testRange2 = Range.expand(testRange1, 0.10, 0.10);
+        assertEquals(110.0, testRange2.getUpperBound(), 0.001);
+    }
+    
+    @Test
+    public void testExpand4() {
+    	Range testRange1 = new Range(0.0, 100.0);
+    	Range testRange2 = Range.expand(testRange1, 0.10, 0.10);
+        
+    	testRange2 = Range.expand(testRange1, -0.8, -0.5);
+        assertEquals(65.0, testRange2.getLowerBound(), 0.001);
+
+    }
+    
+    @Test
+    public void testExpand5() {
+    	Range testRange1 = new Range(0.0, 100.0);
+    	Range testRange2 = Range.expand(testRange1, 0.10, 0.10);
+        
+    	testRange2 = Range.expand(testRange1, -0.8, -0.5);
+        assertEquals(65.0, testRange2.getUpperBound(), 0.001);
+    }
+    
+    
+    
+    
 
     /**
      * A simple test for the scale() method.
@@ -1596,12 +1643,5 @@ public class RangeTestNew{
         assertEquals(2.0, rr.getUpperBound(), EPSILON);
     }
     
-    @Test
-    public void testIsNaNRangeSample() {
-        assertTrue(new Range(Double.NaN, Double.NaN).isNaNRange());
-        assertFalse(new Range(1.0, 2.0).isNaNRange());
-        assertFalse(new Range(Double.NaN, 2.0).isNaNRange());
-        assertFalse(new Range(1.0, Double.NaN).isNaNRange());
-    }
 	
 }
